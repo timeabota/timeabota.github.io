@@ -9,6 +9,7 @@
     --black: #000000;
 
     --mainFont: "Questrial", sans-serif;
+    --decorativeFont: "Raleway Dots", cursive;
     --defaultTransition: all 300ms ease-in-out;
 }
 
@@ -47,4 +48,49 @@ body {
 
 .scroll-section {
     scroll-snap-align: start;
+}
+
+
+.cir {
+    position: absolute;
+    top: 30%;
+    right: 1%;
+    width: 150px;
+    height: 150px;
+    /* background-color: violet; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cir-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    /* background-color: #FFE267; */
+    border-radius: 50%;
+}
+
+.cir-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 0.6rem;
+    animation: rotateText 10s linear infinite;
+}
+@keyframes rotateText {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.cir-text span {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 75px;
 }

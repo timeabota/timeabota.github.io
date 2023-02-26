@@ -2,3 +2,30 @@
     background-color: var(--indigo);
     height: 100vh;
 }
+
+.contact-relative-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left {
+    width: 30vw;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.contact-right { 
+    width: 30vw;
+    padding-left: 2rem;
+}
+
+.footer {
+    position: absolute;
+    font-size: 0.5rem;
+    bottom: 10px;
+}

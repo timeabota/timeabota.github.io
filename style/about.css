@@ -1,5 +1,99 @@
 #about {
-    background-color: var(--mauve);
+    background-color: var(--yellow);
     height: 100vh;
 
+}
+
+.about-relative-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-photo-container {
+    position: relative;
+    width: 600px;
+    height: 650px;
+    transition: var(--defaultTransition);
+}
+
+.about-photo {
+    position: absolute;
+    background-image: url(../assets/IMG_6117.JPG);
+    background-size: cover;
+    background-position: 0px -200px;
+    height: inherit;
+    width: inherit;
+    background-repeat: no-repeat;
+    clip-path: polygon(60% 100%, 0 0, 100% 15%);
+    z-index: 1;
+}
+
+.photo-bck {
+    position: absolute;
+    top: 22px;
+    left: -3px;
+    width: inherit;
+    height: inherit;
+    background-color: var(--rose-pompadour);
+    clip-path: polygon(60% 100%, 0 0, 100% 15%);
+    transform: scale(1.2);
+    z-index: 0;
+    transition: var(--defaultTransition);
+}
+
+.about-photo-container:hover {
+    transform: scale(1.15);
+    transition: var(--defaultTransition);
+}
+/* .about-photo-container:hover .photo-bck {
+    background-color: var(--purple);
+    transition: var(--defaultTransition);
+} */
+
+.text-timea {
+    position: absolute;
+    top: 500px;
+    left: 120px;
+    rotate: -119deg;
+    font-size: 3rem;
+    z-index: 5;
+}
+
+.text-timea div:nth-child(1) {
+    font-family: var(--decorativeFont);
+    margin-bottom: -70px;
+    margin-left: 10px;
+}
+
+/* .text-timea div:nth-child(2) {
+    font-weight: 400;
+} */
+
+.about-text {
+    width: 30vw;
+    margin-left: 2rem;
+    z-index: 10;
+}
+
+.about-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-text h3 {
+    font-size: 0.8rem;
+}
+
+.about-triangle { 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    bottom: 0;
+    right: 0;
+    background-color: var(--rose-pompadour);
+    clip-path: polygon(50% 0, 100% 62%, 100% 100%, 0% 100%);
+    transition: var(--defaultTransition);
 }

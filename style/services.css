@@ -1,3 +1,153 @@
 #services {
     background-color: var(--aquamarine);
+    height: 100vh;
+    width: 100vw;
+}
+
+.services-relative-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.services-list {
+    width: 30vw;
+    margin-left: 65%;
+    font-size: 1.8rem;
+    opacity: 0.5;
+    transition: var(--defaultTransition);
+    z-index: 10;
+}
+
+.services-list:hover {
+    font-size: 2rem;
+    opacity: 1;
+    transition: var(--defaultTransition);
+    cursor: default;
+}
+
+.services-text {
+    /* position: relative;
+    width: 30vw; */
+    font-size: 0.8rem;
+    opacity: 1;
+    text-align: right;
+    transition: var(--defaultTransition);
+    z-index: 5;
+}
+
+.services-text div {
+    opacity: 0;
+    transition: var(--defaultTransition);
+}
+
+.services-text div {
+    position: absolute;
+    top: calc(50% - 30vh);
+    left: calc(50% - 15vw);
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.services-list:nth-of-type(1):hover ~ .services-text div:nth-child(1)  {
+    opacity: 1;
+    transition: var(--defaultTransition);
+} 
+
+.services-list:nth-of-type(2):hover ~ .services-text div:nth-child(2)  {
+    opacity: 1;
+    transition: var(--defaultTransition);
+} 
+
+.services-list:nth-of-type(3):hover ~ .services-text div:nth-child(3)  {
+    opacity: 1;
+    transition: var(--defaultTransition);
+} 
+
+.services-list:nth-of-type(4):hover ~ .services-text div:nth-child(4)  {
+    opacity: 1;
+    transition: var(--defaultTransition);
+}
+
+.services-list:nth-of-type(5):hover ~ .services-text div:nth-child(5)  {
+    opacity: 1;
+    transition: var(--defaultTransition);
+}
+
+.services-list:nth-of-type(6):hover ~ .services-text div:nth-child(6)  {
+    opacity: 1;
+    transition: var(--defaultTransition);
+}
+
+.services-triangle {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    width: 45%;
+    height: 85%;
+    background-color: var(--yellow);
+    clip-path: polygon(100% 9%, 0 0, 82% 100%);
+    z-index: 4;
+    transform: scale(0.8);
+    transition: all 1000ms ease-out;
+}
+
+.dotted-background { 
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 20vw;
+    z-index: 2;
+    right: 10%;
+}
+
+.row {
+    width: 100%;
+    height: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.row span {
+    height: 3vh;
+    width: 3vh;
+    border-radius: 100%;
+    background-color: var(--yellow);
+    transition: all 1000ms ease-out;
+    z-index: 3;
+}
+
+span:hover {
+    background-color: var(--rose-pompadour);
+    transition: all 100ms ease-in;
+    transform: scale(1.5);
+}
+
+.hover-me {
+    position: absolute;
+    right: 16%;
+    top: 79%;
+    rotate: 52deg;
+    font-size: 0.6rem;
+    z-index: 10;
+    transition: var(--defaultTransition);
+    cursor: default;
+}
+
+.hover-me:hover ~ .services-triangle  {
+    background-color: var(--rose-pompadour);
+    transform: scale(0.85);
+    transition: var(--defaultTransition);
 }
