@@ -1,0 +1,106 @@
+#main {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--purple);
+}
+
+.main-relative-container {
+    position: relative;
+    right: 0px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    z-index: 5;
+}
+
+.hello-there {
+    width: 30vw;
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+.hello-timea {
+    font-size: 2rem;
+    text-align: right;
+}
+
+.lets-talk {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.lets-talk a {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: var(--purple);
+    transition: var(--defaultTransition);
+}
+
+.lets-talk a:hover {
+    background-color: var(--yellow);
+    font-size: 1rem;
+    transition: var(--defaultTransition);
+}
+
+.main-content {
+    width: 40vw;
+    padding-left: 2rem;
+    padding-right: 5rem;
+}
+
+.main-pic {
+    position: absolute;
+    top: 60px;
+    left: 300px;
+    rotate: -30deg;
+    background-image: url(../assets/Eszköz\ 1@4x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60vw;
+    height: 70%;
+    z-index: 3;
+}
+
+.main-job {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    width: 140px;
+    bottom: 2rem;
+    font-size: 0.5rem;
+    z-index: 5;
+}
+
+.main-scroll {
+    position: absolute;
+    right: 2rem;
+    top: 50vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    font-size: 0.5rem;
+}
+
+.main-triangles {
+    z-index: 1;
+}
+
+.main-triangles :nth-child(1) {
+    width: 850px;
+    height: 450px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #FFE267;
+    transform: matrix(0.41, -0.91, -0.91, -0.41, -140, -400);
+    z-index: 1;
+}
+
+/* .main-triangles :nth-child(2) {
+    width: 572px;
+    height: 286px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #FFE267;
+    transform: matrix(-1, 0, 0, 1, 1200, -150);
+    z-index: 1;
+} */

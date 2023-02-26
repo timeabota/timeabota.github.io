@@ -1,0 +1,53 @@
+.header {
+    position: absolute;
+    height: 100vh;
+    z-index: 15;
+}
+
+.logo {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.name {
+    font-size: 1rem;
+    padding-left: 2rem;
+}
+
+.nav-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    top: calc(50vh - 50%);
+    white-space: nowrap;
+    width: 400px;
+}
+
+.nav-list a {
+    font-size: 1.2rem;
+    opacity: 0.5;
+    transition: var(--defaultTransition);
+    padding-left: 2rem;
+}
+
+.nav-list li:nth-child(1) {
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    padding-top: 1rem;
+}
+
+.nav-list li:nth-child(5) {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding-bottom: 1rem;
+}
+
+.nav-list a:hover {
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: var(--defaultTransition);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
