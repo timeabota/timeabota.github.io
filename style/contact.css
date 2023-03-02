@@ -17,11 +17,158 @@
     width: 30vw;
     text-align: right;
     padding-right: 2rem;
+    z-index: 5;
+}
+
+.contact-left a {
+    transition: var(--defaultTransition);
+}
+
+.contact-left a:hover {
+    font-size: 2rem;
+    transition: var(--defaultTransition);
+    color: var(--aquamarine);
+}
+
+.contact-circle {
+    position: absolute;
+    top: 1rem;
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--aquamarine);
+    z-index: 0;
+}
+
+.circle-1 {
+    animation: circle-1 3s ease-in-out infinite alternate;
+}
+
+@keyframes circle-1 {
+    100% { 
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        top: 21rem;
+        transform: rotate(360deg);
+    }
+}
+
+.contact-line { 
+    height: 4rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    animation: line-ani 3s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+@keyframes line-ani {
+    100% { 
+        height: 50vh;
+    }
 }
 
 .contact-right { 
     width: 30vw;
     padding-left: 2rem;
+    z-index: 5;
+}
+
+.contact-triangles {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.contact-triangles div:nth-child(1) {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    clip-path: polygon(25% 0, 73% 0, 91% 86%, 0 66%, 0 37%);
+    background: var(--aquamarine);
+}
+
+.contact-triangles div:nth-child(2) {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    bottom: 0;
+    right: 0;
+    background-color: var(--aquamarine);
+    clip-path: polygon(65% 10%, 100% 50%, 100% 100%, 13% 100%);
+    transition: var(--defaultTransition);
+}
+
+.contact-mail {
+    position: absolute;
+    bottom: 10rem;
+    padding: 10px 30px 10px 30px;
+}
+
+.contact-mail a {
+    position: relative;
+    z-index: 3;
+}
+
+.contact-mail::before {
+    background-color: var(--aquamarine);
+    border: 1px solid #000;
+    content: "";
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    left: 2.5px;
+    bottom: -2.5px;
+    z-index: 2;
+    transition: var(--defaultTransition);
+}
+
+.contact-mail:hover::before {
+    transform: translate(-2.5px, -2.5px);
+    transition: var(--defaultTransition);
+}
+
+.contact-mail::after {
+    background-color: var(--indigo);
+    border: 1px solid #000;
+    content: "";
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    left: -2.5px;
+    bottom: 2.5px;
+    z-index: 2;
+    transition: var(--defaultTransition);
+}
+
+.contact-mail:hover::after {
+    transform: translate(2.5px, 2.5px);
+    transition: var(--defaultTransition);
+}
+
+
+.contact-text { 
+    position: absolute;
+    bottom: 5rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text p:nth-child(2) {
+    font-size: 0.5rem;
+    z-index: 10;
+    transition: var(--defaultTransition);
+}
+
+.contact-text p:nth-child(2):hover {
+    font-size: 5rem;
+    transition: var(--defaultTransition);
+    color: var(--aquamarine);
+    cursor: pointer;
 }
 
 .footer {

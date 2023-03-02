@@ -27,7 +27,7 @@
     width: 400px;
 }
 
-.nav-list a {
+.nav-list-a {
     font-size: 1.2rem;
     opacity: 0.5;
     transition: var(--defaultTransition);
@@ -44,10 +44,24 @@
     padding-bottom: 1rem;
 }
 
-.nav-list a:hover {
+.nav-list-a:hover {
     font-size: 1.5rem;
     opacity: 1;
     transition: var(--defaultTransition);
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.nav-list-hover {
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: var(--defaultTransition);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.show-section {
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: var(--defaultTransition);
 }

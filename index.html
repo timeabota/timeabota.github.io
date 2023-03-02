@@ -20,8 +20,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <!--Raleway dots-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+    <!--mulish-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -32,11 +36,11 @@
             Graphic Designer
         </div>
         <ul class="nav-list">
-            <li><a href="#main">Main</a></li>
-            <li><a href="#about">Info About Me</a></li>
-            <li><a href="#services">How Can I Help You?</a></li>
-            <li><a href="#portfolio">My Work</a></li>
-            <li><a href="#contact">Get In Touch</a></li>
+            <li><a href="#main" id="menu-main" class="nav-list-a">Main</a></li>
+            <li><a href="#about" id="menu-about" class="nav-list-a">Info About Me</a></li>
+            <li><a href="#services" id="menu-services" class="nav-list-a">How Can I Help You?</a></li>
+            <li><a href="#portfolio" id="menu-portfolio" class="nav-list-a">My Work</a></li>
+            <li><a href="#contact" id="menu-contact" class="nav-list-a">Get In Touch</a></li>
         </ul>
     </header>
     <main>
@@ -55,12 +59,12 @@
                         <h2>Hello there, nice to meet you</h2>
                         <h1>I’m Timea</h1>
                         <div class="lets-talk">
-                            <a href="contact" class="contact-button">
+                            <a href="#contact" class="contact-button">
                                 Let's Talk
                             </a>
                         </div>
                     </div>
-                    <h3 class="main-content">
+                    <h3 class="main-content show-from-right">
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                         <br><br>
                         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
@@ -150,15 +154,32 @@
                 <div class="contact-relative-container">
                     <div class="contact-left">
                         <h1>Timea Bota</h1>
-                        <h3><a href="https://www.linkedin.com/in/timea-bota/">Linkedin</a></h2>
-                        <h3><a href="https://www.instagram.com/krubodesign.dev/">Instagram</a></h2>
+                        <h3><a href="https://www.linkedin.com/in/timea-bota/" target="_blank">Linkedin</a></h2>
+                        <h3><a href="https://www.instagram.com/krubodesign.dev/" target="_blank">Instagram</a></h2>
+                        <h3><a href="https://github.com/timeabota" target="_blank">Github</a></h3>
                     </div>
+                    <div class="contact-circle circle-1"></div>
+                    <div class="contact-line"></div>
                     <div class="contact-right">
                         <h3>Currently looking for a <br>full-time remote opportunity, <br>as graphic designer.</h3>
                     </div>
+                    <div class="contact-triangles">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="contact-mail">
+                        <a href="mailto:timea.bota@gmail.com">timea.bota@gmail.com</a>
+                    </div>
+                    <div class="contact-text">
+                        <p>Contact me!</p>
+                        <p>or download my CV</p>
+                    </div>
+                    
                     <footer class="footer">(c) 2023 Timea Bota. All rights reserved.</footer>
                 </div>
             </section>
+            
+            <div class="cursor"></div>
         </div>
     </main>  
     

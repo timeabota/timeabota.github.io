@@ -21,6 +21,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     width: 30vw;
+    z-index: 5;
 }
 
 .hello-container h2 {
@@ -35,6 +36,7 @@
 .lets-talk {
     position: relative;
     padding: 10px;
+    z-index: 5;
 }
 .lets-talk::before {
     background-color: var(--yellow);
@@ -73,10 +75,16 @@
 }
 
 .main-content {
+    display: flex;
+    align-items: flex-end;
     width: 40vw;
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 0.8rem;
+    z-index: 5;
+    transform: translate(50px, 0px);
+    opacity: 0;
+    transition: var(--defaultTransition);
 }
 
 .main-pic {
@@ -99,7 +107,16 @@
     width: 140px;
     bottom: 2rem;
     font-size: 0.5rem;
+    opacity: 0;
     z-index: 5;
+    transform: matrix(1, 0, 0, 1, -250, 1);
+    transition: var(--defaultTransition);
+}
+
+.show-job {
+    opacity: 1;
+    transition: var(--defaultTransition);
+    transform: matrix(1, 0, 0, 1, 0, 1)
 }
 
 .main-triangles {
@@ -131,4 +148,30 @@
     background: var(--yellow);
     clip-path: polygon(61% 50%, 100% 0, 100% 100%, 81% 100%);
     z-index: 1;
+}
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+    z-index: 25;
+    
+    transform: translate(-50%, -50%);
+}
+
+.cursor.grow {
+    width: 75px;
+    height: 75px;
+    transition: width 0.5s, height 0.5s;
+}
+
+.show-from-right {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: var(--defaultTransition);
 }
