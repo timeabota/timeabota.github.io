@@ -33,6 +33,7 @@ html {
 body {
     font-family: var(--mainFont);
     height: 1vh;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -114,3 +115,7 @@ body {
     background-color: var(--rose-pompadour);
     color: var(--yellow);
 }
+
+/* .show * {
+    color: pink;
+} */

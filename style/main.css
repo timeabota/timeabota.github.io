@@ -170,7 +170,7 @@
     transition: width 0.5s, height 0.5s;
 }
 
-.show-from-right {
+.scroll-section.show .main-content {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);

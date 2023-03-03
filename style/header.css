@@ -65,3 +65,10 @@
     opacity: 1;
     transition: var(--defaultTransition);
 }
+
+/* OBSERVER RELATED */
+.nav-list-a.scale {
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: var(--defaultTransition);
+}
