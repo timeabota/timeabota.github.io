@@ -26,17 +26,26 @@
 
 .hello-container h2 {
     font-size: 1.3rem;
+    transform: translate(0px, 50px);
+    opacity: 0;
+    transition: var(--defaultTransition);
 }
 
 .hello-container h1 {
     font-size: 2rem;
     padding-bottom: 10px;
+    transform: translate(0px, 50px);
+    opacity: 0;
+    transition: var(--defaultTransition);
 }
 
 .lets-talk {
     position: relative;
     padding: 10px;
     z-index: 5;
+    transform: translate(0px, 50px);
+    opacity: 0;
+    transition: var(--defaultTransition);
 }
 .lets-talk::before {
     background-color: var(--yellow);
@@ -82,7 +91,7 @@
     padding-right: 2rem;
     font-size: 0.8rem;
     z-index: 5;
-    transform: translate(50px, 0px);
+    transform: translate(0px, 50px);
     opacity: 0;
     transition: var(--defaultTransition);
 }
@@ -173,5 +182,24 @@
 .scroll-section.show .main-content {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: var(--defaultTransition);
+    transition: all 250ms ease-in-out;
 }
+
+.scroll-section.show .hello-container h1 {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.scroll-section.show .hello-container h2 {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+}
+
+.scroll-section.show .lets-talk {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+}
+
