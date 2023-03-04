@@ -94,6 +94,7 @@
     transform: translate(0px, 50px);
     opacity: 0;
     transition: var(--defaultTransition);
+    
 }
 
 .main-pic {
@@ -116,16 +117,16 @@
     width: 140px;
     bottom: 2rem;
     font-size: 0.5rem;
-    opacity: 0;
+    opacity: 1;
     z-index: 5;
-    transform: matrix(1, 0, 0, 1, -250, 1);
+    transform: matrix(1, 0, 0, 1, 0, 1);
     transition: var(--defaultTransition);
 }
 
 .show-job {
-    opacity: 1;
+    opacity: 0;
     transition: var(--defaultTransition);
-    transform: matrix(1, 0, 0, 1, 0, 1)
+    transform: matrix(1, 0, 0, 1, -250, 1);
 }
 
 .main-triangles {
@@ -182,24 +183,27 @@
 .scroll-section.show .main-content {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 250ms ease-in-out;
+    transition: var(--defaultTransition);
+    transition-delay: .5s;
 }
 
 .scroll-section.show .hello-container h1 {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 300ms ease-in-out;
+    transition: var(--defaultTransition);
+    transition-delay: .3s;
 }
 
 .scroll-section.show .hello-container h2 {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 200ms ease-in-out;
+    transition: var(--defaultTransition);
+    transition-delay: .2s;
 }
 
 .scroll-section.show .lets-talk {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 200ms ease-in-out;
+    transition: var(--defaultTransition);
+    transition-delay: .4;
 }
-

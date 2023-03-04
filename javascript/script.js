@@ -53,6 +53,7 @@ links.forEach((link) => {
 //variables
 const menuList = document.querySelectorAll('.nav-list-a');
 const sections = document.querySelectorAll('.scroll-section');
+const lfp = document.querySelector(".main-job");
 
 //menu class toggler function
 const menuClasser = observable => menuList.forEach(menu => menu.id.indexOf(observable.id) > -1 ? menu.classList.add("scale") : menu.classList.remove("scale"));
@@ -63,8 +64,12 @@ const observer = new IntersectionObserver((sections) => {
         if (section.isIntersecting) {
             section.target.classList.add("show");
             menuClasser(section.target);
+            if (section.target.id.indexOf("contact") > -1) {
+                lfp.classList.add("show-job");
+            }
         } else {
             section.target.classList.remove("show");
+            lfp.classList.remove("show-job");
         }
     })
 },

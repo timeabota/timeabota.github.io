@@ -17,6 +17,32 @@
     width: 600px;
     height: 650px;
     transition: var(--defaultTransition);
+    opacity: 0;
+}
+
+.show .about-photo-container {
+    animation: bounce-anim 1s linear ;
+ }
+
+@keyframes bounce-anim {
+    0% {
+        transform: rotate(-23deg);
+    }
+    55% {
+        transform: rotate(10deg);  
+    }
+    75% {
+        transform: rotate(-15deg);  
+    }
+    85% {
+        transform: rotate(5deg);
+    }
+    95% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .about-photo {
@@ -29,6 +55,8 @@
     background-repeat: no-repeat;
     clip-path: polygon(60% 100%, 0 0, 100% 15%);
     z-index: 1;
+    transform: scale(0.5);
+    transition: var(--defaultTransition);
 }
 
 .photo-bck {
@@ -44,14 +72,23 @@
     transition: var(--defaultTransition);
 }
 
-.about-photo-container:hover {
-    transform: scale(1.15);
+.about-photo-container:hover .text-timea{
+    opacity: 1;
+    transform: rotate(180deg);
     transition: var(--defaultTransition);
 }
-/* .about-photo-container:hover .photo-bck {
-    background-color: var(--purple);
+.about-photo-container:hover .photo-bck {
     transition: var(--defaultTransition);
-} */
+}
+.about-photo-container:hover {
+    transform: scale(1.1);
+    transition: var(--defaultTransition);
+}
+
+.about-triangle:hover {
+    transform: scale(1.1);
+    transition: var(--defaultTransition);
+}
 
 .text-timea {
     position: absolute;
@@ -60,6 +97,8 @@
     rotate: -119deg;
     font-size: 3rem;
     z-index: 5;
+    transition: var(--defaultTransition);
+    opacity: 0;
 }
 
 .text-timea div:nth-child(1) {
@@ -67,10 +106,6 @@
     margin-bottom: -70px;
     margin-left: 10px;
 }
-
-/* .text-timea div:nth-child(2) {
-    font-weight: 400;
-} */
 
 .about-text {
     width: 30vw;
@@ -81,10 +116,16 @@
 .about-text h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    transform: translate(0px, 50px);
+    opacity: 0;
+    transition: var(--defaultTransition);
 }
 
 .about-text h3 {
     font-size: 0.8rem;
+    transform: translate(0px, 50px);
+    opacity: 0;
+    transition: var(--defaultTransition);
 }
 
 .about-triangle { 
@@ -96,4 +137,28 @@
     background-color: var(--rose-pompadour);
     clip-path: polygon(65% 10%, 100% 50%, 100% 100%, 13% 100%);
     transition: var(--defaultTransition);
+}
+
+.scroll-section.show .about-photo {
+    transform: scale(1);
+    transition: var(--defaultTransition);
+}
+
+.scroll-section.show .about-photo-container {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.scroll-section.show .about-text h1 {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: var(--defaultTransition);
+    transition-delay: .3s;
+}
+
+.scroll-section.show .about-text h3 {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: var(--defaultTransition);
+    transition-delay: .5s;
 }
