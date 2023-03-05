@@ -17,16 +17,23 @@
     width: 30vw;
     margin-left: 65%;
     font-size: 1.8rem;
-    opacity: 0.5;
+    opacity: 0;
     transition: var(--defaultTransition);
+    transform: translate(50px, 0px);
     z-index: 10;
 }
 
+.show .services-list {
+    opacity: 0.5;
+    
+    transform: var(--defaultTransition);
+    transform: translate(0px, 0px);
+}
 .services-list:hover {
     font-size: 2rem;
     opacity: 1;
     transition: var(--defaultTransition);
-    /* cursor: default; */
+    cursor: default;
 }
 
 .services-text {
@@ -176,7 +183,6 @@
     background-color: var(--yellow);
     clip-path: polygon(100% 9%, 0 0, 82% 100%);
     z-index: 4;
-    transform: scale(0.8);
     transition: all 1000ms ease-out;
 }
 
@@ -221,8 +227,8 @@ span:hover {
     position: absolute;
     padding: 0.5rem;
     right: 15%;
-    top: 75%;
-    rotate: 52deg;
+    top: 80%;
+    rotate: 50deg;
     font-size: 0.6rem;
     z-index: 10;
     transition: var(--defaultTransition);
@@ -238,5 +244,35 @@ span:hover {
     background-color: var(--rose-pompadour);
     transform: scale(0.85);
     transition: var(--defaultTransition);
+}
+
+@media screen and (max-width: 1281px) {
+    .services-list {
+        font-size: 1.2rem;
+        padding: 2.5px;
+    }
+    .services-list:hover {
+        font-size: 1.5rem;
+    }
+    .dotted-background {
+        right: 0;
+        width: 30vw;
+    }
+    .hover-me {
+        right: 13%;
+        rotate: 59deg;
+    }
+    .row {
+        width: inherit;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .services-list {
+        margin-left: 70%;
+    }  
+    .services-text {
+        font-size: 0.7rem;
+    }
 }
 

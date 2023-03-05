@@ -2,6 +2,7 @@
     position: absolute;
     height: 100vh;
     z-index: 15;
+    width: 50px;
 }
 
 .logo {
@@ -14,6 +15,7 @@
 .name {
     font-size: 0.8rem;
     padding-left: 2rem;
+    width: 300px;
 }
 
 .nav-list {
@@ -24,7 +26,7 @@
     height: 100vh;
     top: calc(50vh - 50%);
     white-space: nowrap;
-    width: 400px;
+    width: 100px;
 }
 
 .nav-list-a {
@@ -34,14 +36,20 @@
     padding-left: 2rem;
 }
 
-.nav-list li:nth-child(1) {
-    border-top: 2px solid rgba(0, 0, 0, 0.5);
-    padding-top: 1rem;
+.line-1 {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: 0;
+    width: 15rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.nav-list li:nth-child(5) {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-    padding-bottom: 1rem;
+.line-2 {
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 0;
+    width: 15rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .nav-list-a:hover {
@@ -52,13 +60,13 @@
     padding-bottom: 15px;
 }
 
-.nav-list-hover {
+/* .nav-list-hover {
     font-size: 1.5rem;
     opacity: 1;
     transition: var(--defaultTransition);
     padding-top: 15px;
     padding-bottom: 15px;
-}
+} */
 
 .show-section {
     font-size: 1.5rem;
@@ -71,4 +79,37 @@
     font-size: 1.5rem;
     opacity: 1;
     transition: var(--defaultTransition);
+}
+
+@media screen and (max-width: 1281px) {
+    .nav-list-a {
+        font-size: 1rem;
+    }
+    .nav-list-a:hover:hover {
+        font-size: 1.2rem;
+    }
+    .nav-list-a.scale {
+        font-size: 1.2rem;
+    }
+    .line-1 {
+        width: 10rem;
+    }
+    .line-2 {
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width: 1281px) {
+    .nav-list-a {
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .line-1 {
+        top: calc(50% - 75px);
+    }
+    .line-2 {
+        top: calc(50% + 75px);
+    }
 }

@@ -1,7 +1,23 @@
 #contact {
-    background-color: var(--indigo);
     height: 100vh;
+    /* background: linear-gradient(
+        to right, var(--indigo), var(--yellow), var(--rose-pompadour));
+    background-size: 400% 400%;
+    animation: animate-background 20s infinite ease-in-out; */
+    background-color: var(--indigo);
 }
+
+/* @keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+} */
 
 .contact-relative-container {
     position: relative;
@@ -26,35 +42,61 @@
 
 .contact-left a:hover {
     font-size: 2rem;
+    font-weight: 600;
     transition: var(--defaultTransition);
     color: var(--aquamarine);
 }
 
 .contact-circle {
     position: absolute;
-    top: 1rem;
     height: 4rem;
     width: 4rem;
     background-color: var(--aquamarine);
     z-index: 0;
+    animation: circle-1 8s ease-in-out infinite alternate;
+    opacity: 0;
+    transition: var(--defaultTransition);
 }
 
-.circle-1 {
-    animation: circle-1 3s ease-in-out infinite alternate;
+.show .contact-circle {
+    opacity: 1;
+    transition: var(--defaultTransition);
 }
 
 @keyframes circle-1 {
-    100% { 
-        width: 4rem;
-        height: 4rem;
+    0% {
+        border-radius: 0%;
+        top: 10%;
+    }
+    10% {
         border-radius: 50%;
-        top: 21rem;
+        top: 75%;
+    }
+    30% {
+        border-radius: 0%;
+        top: 20%;
+    }
+    40% {
+        border-radius: 50%;
+        top: 80%;
+    }
+    70% {
+        border-radius: 0%;
+        top: 40%;
+    }
+    85% {
+        border-radius: 50%;
+        top: 85%;
+    }
+    100% {
+        border-radius: 50%;
+        top: 70%;
         transform: rotate(360deg);
     }
 }
 
 .contact-line { 
-    height: 4rem;
+    height: 5rem;
     border: 1px solid rgba(0, 0, 0, 0.5);
     animation: line-ani 3s ease-in-out infinite alternate;
     z-index: 1;
@@ -62,7 +104,7 @@
 
 @keyframes line-ani {
     100% { 
-        height: 50vh;
+        height: 7rem;
     }
 }
 
@@ -100,9 +142,14 @@
     transition: var(--defaultTransition);
 }
 
+.contact-triangles div:nth-child(2):hover {
+    transform: scale(1.1);
+    transition: var(--defaultTransition);
+}
+
 .contact-mail {
     position: absolute;
-    bottom: 10rem;
+    bottom: 30%;
     padding: 10px 30px 10px 30px;
 }
 
@@ -147,10 +194,9 @@
     transition: var(--defaultTransition);
 }
 
-
 .contact-text { 
     position: absolute;
-    bottom: 5rem;
+    bottom: 15%;
     height: 6rem;
     display: flex;
     flex-direction: column;
@@ -158,17 +204,19 @@
     align-items: center;
 }
 
-.contact-text p:nth-child(2) {
+.contact-text a {
     font-size: 0.5rem;
     z-index: 10;
     transition: var(--defaultTransition);
 }
 
-.contact-text p:nth-child(2):hover {
+.contact-text a:hover {
     font-size: 5rem;
     transition: var(--defaultTransition);
     color: var(--aquamarine);
     cursor: pointer;
+    /* font-weight: 800; */
+    text-shadow: 20px 20px 30px #00000052;
 }
 
 .footer {
@@ -176,3 +224,16 @@
     font-size: 0.5rem;
     bottom: 10px;
 }
+
+@media screen and (max-width: 1024px) {
+    .contact-relative-container {
+        padding-left: 5rem;
+    }
+    .contact-left h1 {
+        font-size: 1rem;
+    }
+    .contact-left h3 {
+        font-size: 0.8rem;
+    }
+}
+

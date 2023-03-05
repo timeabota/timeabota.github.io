@@ -19,7 +19,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
     width: 30vw;
     z-index: 5;
 }
@@ -29,6 +28,7 @@
     transform: translate(0px, 50px);
     opacity: 0;
     transition: var(--defaultTransition);
+    text-align: right;
 }
 
 .hello-container h1 {
@@ -85,7 +85,6 @@
 
 .main-content {
     display: flex;
-    align-items: flex-end;
     width: 40vw;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -118,9 +117,16 @@
     bottom: 2rem;
     font-size: 0.5rem;
     opacity: 1;
-    z-index: 5;
+    z-index: 16;
     transform: matrix(1, 0, 0, 1, 0, 1);
     transition: var(--defaultTransition);
+}
+
+.main-job:hover {
+    transform: scale(1.5);
+    background-color: var(--rose-pompadour);
+    color: var(--yellow);
+    cursor: default;
 }
 
 .show-job {
@@ -180,28 +186,28 @@
     transition: width 0.5s, height 0.5s;
 }
 
-.scroll-section.show .main-content {
+.show .main-content {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
     transition-delay: .5s;
 }
 
-.scroll-section.show .hello-container h1 {
+.show .hello-container h1 {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
     transition-delay: .3s;
 }
 
-.scroll-section.show .hello-container h2 {
+.show .hello-container h2 {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
     transition-delay: .2s;
 }
 
-.scroll-section.show .lets-talk {
+.show .lets-talk {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);

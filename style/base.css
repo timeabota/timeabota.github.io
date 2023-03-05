@@ -32,8 +32,16 @@ html {
 
 body {
     font-family: var(--mainFont);
-    height: 1vh;
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
 }
 
 ::-webkit-scrollbar {
@@ -116,6 +124,9 @@ body {
     color: var(--yellow);
 }
 
-/* .show * {
-    color: pink;
-} */
+
+@media screen and (max-height: 600px) {
+    html {
+        font-size: 20px;
+    }
+}
