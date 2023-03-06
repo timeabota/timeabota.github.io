@@ -182,6 +182,7 @@
     .nav-list {
         transform: translate(1000px, 0px);
         transition: all 0.3s linear;
+        display: none;
     }
 
     .nav-list li {
@@ -208,6 +209,7 @@
     }
 
     .nav-list.active {
+        display: flex;
         opacity: 1;
         justify-content: center;
         align-items: center;
@@ -226,6 +228,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        z-index: 5;
     }
     .name {
         padding: unset;

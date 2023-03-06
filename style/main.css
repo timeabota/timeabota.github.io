@@ -242,12 +242,26 @@
     .main-relative-container {
         flex-direction: column;
         padding: unset;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .main-pic {
+        top: 80px;
+        left: 0px;
+        rotate: 22deg;
     }
     .hello-container {
         flex-direction: column;
-        width: 100vw;
+        width: 95vw;
+        margin-top: 40vh;
+    }
+    .hello-container h1 {
+        font-size: 0.7rem;
     }
     .main-content {
         width: 100vw;
+        padding: 1rem;
     }
 }

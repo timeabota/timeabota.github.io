@@ -31,8 +31,7 @@ html {
 
 body {
     font-family: var(--mainFont);
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 main {
@@ -69,7 +68,7 @@ h3 {
 .cir {
     position: absolute;
     bottom: 2%;
-    right: 1%;
+    right: 3%;
     width: 75px;
     height: 75px;
     /* background-color: violet; */
