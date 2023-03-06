@@ -27,7 +27,6 @@
 html {
     font-size: 25px;
     min-width: 280px;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -74,7 +73,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 15;
+    z-index: 14;
     transition: var(--defaultTransition);
 }
 

@@ -146,24 +146,36 @@
 
 .main-triangles :nth-child(1) {
     position: absolute;
-    top: 30%;
-    width: 850px;
-    height: 450px;
+    width: 70vh;
+    height: 40vh;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     background: var(--yellow);
-    transform: matrix(0.41, -0.91, -0.91, -0.41, -140, -400);
+    transform: translate(-16vh, -16vh) rotate(-21deg);
     z-index: 1;
+    transition: var(--defaultTransition);
+}
+
+.main-triangles :nth-child(1):hover {
+    transform: translate(-16vh, -16vh) rotate(-21deg) scale(1.1);
+    transition: var(--defaultTransition);
 }
 
 .main-triangles :nth-child(2) {
     position: absolute;
-    width: 450px;
-    height: 200px;
+    width: 50vh;
+    height: 25vh;
     bottom: 0;
     right: 0;
     background: var(--yellow);
     clip-path: polygon(61% 50%, 100% 0, 100% 100%, 81% 100%);
     z-index: 1;
+    transition: var(--defaultTransition);
+}
+
+.main-triangles :nth-child(2):hover {
+    width: 52vh;
+    height: 27vh;
+    transition: var(--defaultTransition);
 }
 
 .cursor {
@@ -190,26 +202,37 @@
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
-    transition-delay: .5s;
+    transition-delay: .2s;
 }
 
 .show .hello-container h1 {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
-    transition-delay: .3s;
+    transition-delay: .1s;
 }
 
 .show .hello-container h2 {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
-    transition-delay: .2s;
 }
 
 .show .lets-talk {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
-    transition-delay: .4;
+    transition-delay: .2;
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-job {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-job {
+        display: none;
+    }
 }

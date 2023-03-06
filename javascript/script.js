@@ -81,4 +81,25 @@ const observer = new IntersectionObserver((sections) => {
 sections.forEach(e => observer.observe(e));
 
 
+//respo menu
+const toggleButton = document.querySelector('.toggle-button');
+const navList = document.querySelector('.nav-list');
 
+const addClasses = (target, clss) => {
+    document.querySelector(`${target}`).classList.toggle(`${clss}`);    
+}
+
+if (window.innerWidth <= 768) {
+    toggleButton.addEventListener('click', () => addClasses('.toggle-button', 'open'));
+    toggleButton.addEventListener('click', () => addClasses('.nav-list', 'active'));
+} 
+
+//navbar remove classes
+const removeClasses = (mirol, mit) => {
+    document.querySelector(`${mirol}`).classList.remove(`${mit}`);    
+}
+
+if (window.innerWidth <= 768) {
+    navList.addEventListener('click', () => removeClasses('.toggle-button', 'open'));
+    navList.addEventListener('click', () => removeClasses('.nav-list', 'active'));
+} 

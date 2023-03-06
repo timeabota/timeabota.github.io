@@ -1,5 +1,5 @@
 #contact {
-    height: 100vh;
+    height: 100%;
     /* background: linear-gradient(
         to right, var(--indigo), var(--yellow), var(--rose-pompadour));
     background-size: 400% 400%;
@@ -34,6 +34,9 @@
     text-align: right;
     padding-right: 2rem;
     z-index: 5;
+    opacity: 0;
+    transform: translate(-50px, 0px);
+    transition: var(--defaultTransition);
 }
 
 .contact-left a {
@@ -96,10 +99,13 @@
 }
 
 .contact-line { 
-    height: 5rem;
+    height: 10rem;
     border: 1px solid rgba(0, 0, 0, 0.5);
     animation: line-ani 3s ease-in-out infinite alternate;
     z-index: 1;
+    transform: translate(0px, -200px);
+    opacity: 0;
+    transition: var(--defaultTransition);
 }
 
 @keyframes line-ani {
@@ -112,6 +118,9 @@
     width: 30vw;
     padding-left: 2rem;
     z-index: 5;
+    opacity: 0;
+    transform: translate(50px, 0px);
+    transition: var(--defaultTransition);
 }
 
 .contact-triangles {
@@ -125,10 +134,16 @@
 
 .contact-triangles div:nth-child(1) {
     position: absolute;
-    width: 250px;
-    height: 200px;
+    width: 40vh;
+    height: 30vh;
     clip-path: polygon(25% 0, 73% 0, 91% 86%, 0 66%, 0 37%);
     background: var(--aquamarine);
+    transition: var(--defaultTransition);
+}
+
+.contact-triangles div:nth-child(1):hover {
+    transform: scale(1.1);
+    transition: var(--defaultTransition);
 }
 
 .contact-triangles div:nth-child(2) {
@@ -151,11 +166,15 @@
     position: absolute;
     bottom: 30%;
     padding: 10px 30px 10px 30px;
+    transform: translate(0px, 50px);
+    opacity: 0;
+    transition: var(--defaultTransition);
+    z-index: 13;
 }
 
 .contact-mail a {
     position: relative;
-    z-index: 3;
+    z-index: 15;
 }
 
 .contact-mail::before {
@@ -202,6 +221,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 10;
+    opacity: 0;
+    transform: translate(0px, 150px);
+    transition: var(--defaultTransition);
 }
 
 .contact-text a {
@@ -211,18 +234,51 @@
 }
 
 .contact-text a:hover {
-    font-size: 5rem;
+    font-size: 4rem;
     transition: var(--defaultTransition);
     color: var(--aquamarine);
     cursor: pointer;
     /* font-weight: 800; */
-    text-shadow: 20px 20px 30px #00000052;
+    text-shadow: 10px 10px 20px var(--indigo);
 }
 
 .footer {
     position: absolute;
     font-size: 0.5rem;
     bottom: 10px;
+}
+
+.show .contact-mail {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: var(--defaultTransition);
+    transition-delay: 0.3s;
+}
+
+.show .contact-line {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: var(--defaultTransition);
+    transition-delay: 0.2s;
+}
+
+.show .contact-right {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: var(--defaultTransition);
+}
+
+.show .contact-left {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: var(--defaultTransition);
+}
+
+.show .contact-text {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: var(--defaultTransition);
+    transition-delay: 0.2s;
 }
 
 @media screen and (max-width: 1024px) {
@@ -234,6 +290,24 @@
     }
     .contact-left h3 {
         font-size: 0.8rem;
+    }
+    .contact-text a:hover {
+        font-size: 2.9rem;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .contact-text {
+        bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .contact-line {
+        animation: unset;
+    }
+    .contact-circle {
+        animation: unset;
     }
 }
 

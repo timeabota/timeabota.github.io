@@ -147,14 +147,14 @@
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
-    transition-delay: .3s;
+    transition-delay: .1s;
 }
 
 .show .about-text h3 {
     transform: translate(0px, 0px);
     opacity: 1;
     transition: var(--defaultTransition);
-    transition-delay: .5s;
+    transition-delay: .2s;
 }
 
 @media screen and (max-width: 1281px) {
