@@ -1,4 +1,5 @@
 #main {
+    position: relative;
     height: 100vh;
     width: 100vw;
     background-color: var(--purple);
@@ -234,5 +235,19 @@
 @media screen and (max-width: 768px) {
     .main-job {
         display: none;
+    }
+    .main-triangles div:nth-child(1) {
+        display: none;
+    }
+    .main-relative-container {
+        flex-direction: column;
+        padding: unset;
+    }
+    .hello-container {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .main-content {
+        width: 100vw;
     }
 }

@@ -121,17 +121,7 @@
     }
 }
 
-@media screen and (max-height: 600px) {
-    .line-1 {
-        top: calc(50% - 75px);
-    }
-
-    .line-2 {
-        top: calc(50% + 75px);
-    }
-}
-
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .toggle-button {
         display: flex;
         z-index: 21;
@@ -173,7 +163,7 @@
         align-items: center;
         text-align: center;
         background: var(--indigo);
-        z-index: 17;
+        z-index: 18;
         border: unset;
         transform: translate(0px, 150px);
         transition: var(--defaultTransition);
@@ -195,18 +185,18 @@
     }
 
     .nav-list li {
-        margin: 0.3rem;
+        margin: 0.1rem;
     }    
 
     .nav-list-a {
         display: flex;
         width: 310px;
         justify-content: center;
-        color: var(--yellow);
+        color: var(--black);
         background-color: var(--rose-pompadour);
         font-size: 1.3rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
         padding-left: 0.2rem;
         padding-right: 0.2rem;
         opacity: 1;
@@ -223,14 +213,49 @@
         align-items: center;
         width: 100vw;
         background-color: var(--yellow);
-        z-index: 16;
+        z-index: 17;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);
     }
+    .logo {
+        padding: unset;
+        position: absolute;
+        top: 1rem;
+        padding-right: 1rem;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .name {
+        padding: unset;
+        position: absolute;
+        top: 3rem;
+        padding-right: 1rem;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+    }
 }
 
-/* @media screen and (max-height: 550px) {
-    .active {
-        font-size: rem;
+
+
+@media screen and (max-height: 600px) {
+    .line-1 {
+        top: calc(50% - 75px);
     }
-} */
+
+    .line-2 {
+        top: calc(50% + 75px);
+    }
+}
+
+@media only screen and (max-width:768px) and (max-height: 550px) {
+    .nav-list-a {
+        font-size: 0.8rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}

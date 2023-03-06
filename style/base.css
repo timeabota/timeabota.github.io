@@ -35,6 +35,10 @@ body {
     overflow-y: hidden;
 }
 
+main {
+    overflow: hidden;
+}
+
 h1 {
     font-size: 1.5rem;
 }
@@ -49,7 +53,6 @@ h3 {
     background: transparent;
 }
 
-
 .scroll-container {
     scroll-snap-type: y mandatory;
     overflow: auto;
@@ -59,7 +62,8 @@ h3 {
 
 .scroll-section {
     scroll-snap-align: start;
-}
+}  
+
 
 
 .cir {
@@ -127,5 +131,11 @@ h3 {
 @media screen and (max-height: 600px) {
     html {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cursor {
+        display: none;
     }
 }

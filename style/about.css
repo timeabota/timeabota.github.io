@@ -72,18 +72,7 @@
     transition: var(--defaultTransition);
 }
 
-.about-photo-container:hover .photo-bck {
-    transition: var(--defaultTransition);
-}
-.about-photo-container:hover {
-    transform: scale(1.05);
-    transition: var(--defaultTransition);
-}
 
-.about-triangle:hover {
-    transform: scale(1.1);
-    transition: var(--defaultTransition);
-}
 
 .text-timea {
     position: absolute;
@@ -155,6 +144,20 @@
     opacity: 1;
     transition: var(--defaultTransition);
     transition-delay: .2s;
+}
+
+@media screen and (min-width: 1440px) {
+    .about-photo-container:hover .photo-bck {
+        transition: var(--defaultTransition);
+    }
+    .about-photo-container:hover {
+        transform: scale(1.05);
+        transition: var(--defaultTransition);
+    }
+    .about-triangle:hover {
+        transform: scale(1.1);
+        transition: var(--defaultTransition);
+    }
 }
 
 @media screen and (max-width: 1281px) {
