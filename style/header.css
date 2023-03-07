@@ -60,14 +60,6 @@
     padding-bottom: 15px;
 }
 
-/* .nav-list-hover {
-    font-size: 1.5rem;
-    opacity: 1;
-    transition: var(--defaultTransition);
-    padding-top: 15px;
-    padding-bottom: 15px;
-} */
-
 .show-section {
     font-size: 1.5rem;
     opacity: 1;
@@ -125,7 +117,6 @@
     .toggle-button {
         display: flex;
         z-index: 21;
-        margin: 10px;
     }
 
     .toggle-button.open > .bar:nth-child(1) {
@@ -260,5 +251,15 @@
         font-size: 0.8rem;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
+    }
+}
+
+/*min width optimalization for bigger devices*/
+@media screen and (min-width:2560px) {
+    .line-1 {
+        top: calc(50% - 150px);
+    }
+    .line-2 {
+        top: calc(50% + 150px);
     }
 }
