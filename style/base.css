@@ -137,6 +137,9 @@ h3 {
     .cursor {
         display: none;
     }
+    .scroll-container {
+        scroll-snap-type: y proximity;
+    }
 }
 
 @media screen and (max-width: 480px) {
