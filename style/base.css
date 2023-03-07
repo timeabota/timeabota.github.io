@@ -144,6 +144,9 @@ h3 {
     .scroll-container {
         scroll-snap-type: y proximity;
     }
+    .cir {
+        bottom: 1vh;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -152,9 +155,3 @@ h3 {
     }
 }
 
-/*max-height query for height optimalization*/
-@media screen and (max-height: 600px) {
-    html {
-        font-size: 20px;
-    }
-}

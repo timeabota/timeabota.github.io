@@ -255,7 +255,7 @@
     .hello-container {
         flex-direction: column;
         width: 100vw;
-        margin-top: 40vh;
+        margin-top: 30vh;
         padding: 1rem;
     }
     .hello-container h1 {
@@ -263,7 +263,10 @@
     }
     .main-content {
         width: 100vw;
-        font-size: 0.9rem;
-        padding: 1rem;
+        font-size: 0.8rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0;
+        padding-top: 0;
     }
 }

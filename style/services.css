@@ -299,7 +299,7 @@ span:hover {
         right: unset;
     }
     .services-list {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     .services-list:hover {
         font-size: 1rem;
@@ -397,7 +397,7 @@ span:hover {
         transform: translate(-100vh, 0px);
         width: 100vw;
         padding: 1rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         align-items: flex-start;
     }
 }
