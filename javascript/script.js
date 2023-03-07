@@ -58,6 +58,36 @@ const lfp = document.querySelector(".main-job");
 //menu class toggler function
 const menuClasser = observable => menuList.forEach(menu => menu.id.indexOf(observable.id) > -1 ? menu.classList.add("scale") : menu.classList.remove("scale"));
 
+//services show class function
+const servicesMenu = document.querySelectorAll('.services-list');
+const servicesText = document.querySelectorAll('.services-text > div');
+
+const showService = () => {
+    servicesMenu.forEach((_, idx) => {
+        const menu = servicesMenu[idx];
+        const text = servicesText[idx];
+        const pair = [menu,text];
+
+        const classR = () => {
+            pair.forEach(e => {
+                if (e.classList.contains("show-service")) {
+                    e.classList.remove("show-service");
+                } else {
+                    e.classList.add("show-service");
+                }
+            });
+
+            servicesMenu.forEach(e => {
+                if (e !== menu) e.classList.remove("show-service");
+            })
+            servicesText.forEach(e => {
+                if (e !== text) e.classList.remove("show-service");
+            })
+        }
+        menu.addEventListener("touchstart", () => classR());
+    })
+}
+
 //observer init
 const observer = new IntersectionObserver((sections) => {
     sections.forEach(section => {
@@ -90,16 +120,19 @@ const addClasses = (target, clss) => {
 }
 
 if (window.innerWidth <= 768) {
+    //nav - bar&toggle button invoke
     toggleButton.addEventListener('click', () => addClasses('.toggle-button', 'open'));
     toggleButton.addEventListener('click', () => addClasses('.nav-list', 'active'));
+
+    navList.addEventListener('click', () => removeClasses('.toggle-button', 'open'));
+    navList.addEventListener('click', () => removeClasses('.nav-list', 'active'));
+
+    //services show class function invoke
+    // servicesMenu.forEach(service => service.addEventListener("touchstart", () => showService()));
+    showService();
 } 
 
 //navbar remove classes
 const removeClasses = (mirol, mit) => {
     document.querySelector(`${mirol}`).classList.remove(`${mit}`);    
 }
-
-if (window.innerWidth <= 768) {
-    navList.addEventListener('click', () => removeClasses('.toggle-button', 'open'));
-    navList.addEventListener('click', () => removeClasses('.nav-list', 'active'));
-} 
