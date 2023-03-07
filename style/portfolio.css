@@ -1,4 +1,5 @@
 #portfolio {
     background-color: var(--mindaro);
     height: 100vh;
+    overflow: hidden;
 }

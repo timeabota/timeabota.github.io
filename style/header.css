@@ -99,17 +99,17 @@
     transition: all .05s linear;
 }
 
-@media screen and (max-width: 1281px) {
+@media screen and (max-width: 1280px) {
     .nav-list-a {
         font-size: 1rem;
     }
 
-    .nav-list-a:hover:hover {
-        font-size: 1.2rem;
+    .nav-list-a:hover {
+        font-size: 1.1rem;
     }
 
     .nav-list-a.scale {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .line-1 {
@@ -165,7 +165,7 @@
         background: var(--indigo);
         z-index: 18;
         border: unset;
-        transform: translate(0px, 150px);
+        transform: scale(0);
         transition: var(--defaultTransition);
         font-size: 0.5rem;
         color: var(--yellow);
@@ -174,15 +174,14 @@
     } 
 
     .active .mobile-job {
-        transform: translate(0px, 0px);
+        transform: scale(1);
         transition: var(--defaultTransition);
         transition-delay: 0.2s;
     }
     
     .nav-list {
-        transform: translate(1000px, 0px);
+        transform: scale(0);
         transition: all 0.3s linear;
-        display: none;
     }
 
     .nav-list li {
@@ -193,7 +192,7 @@
         display: flex;
         width: 310px;
         justify-content: center;
-        color: var(--black);
+        color: var(--yellow);
         background-color: var(--rose-pompadour);
         font-size: 1.3rem;
         padding-top: 0.8rem;
@@ -216,9 +215,10 @@
         width: 100vw;
         background-color: var(--yellow);
         z-index: 17;
-        transform: translate(0px, 0px);
+        transform: scale(1);
         transition: var(--defaultTransition);
     }
+    
     .logo {
         padding: unset;
         position: absolute;

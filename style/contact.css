@@ -1,23 +1,8 @@
 #contact {
     height: 100%;
-    /* background: linear-gradient(
-        to right, var(--indigo), var(--yellow), var(--rose-pompadour));
-    background-size: 400% 400%;
-    animation: animate-background 20s infinite ease-in-out; */
+    overflow: hidden;
     background-color: var(--indigo);
 }
-
-/* @keyframes animate-background {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-} */
 
 .contact-relative-container {
     position: relative;
@@ -27,6 +12,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .contact-left {

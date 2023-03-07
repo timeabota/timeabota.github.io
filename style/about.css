@@ -1,7 +1,7 @@
 #about {
     background-color: var(--yellow);
     height: 100vh;
-
+    overflow: hidden;
 }
 
 .about-relative-container {
@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .about-photo-container {
