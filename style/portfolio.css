@@ -3,3 +3,84 @@
     height: 100vh;
     overflow: hidden;
 }
+
+.portfolio-relative-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.port-title {
+    padding-right: 2rem;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    z-index: 10;
+}
+
+.port-table {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.port-table div {
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+
+.port-row {
+    display: flex;
+    flex-direction: row;
+    padding-right: 2rem;
+}
+
+.port-row:hover {
+    background-color: var(--mauve);
+    transition: var(--defaultTransition);
+    cursor: pointer;
+}
+
+.port-row div:nth-child(1) {
+    width: 100px;
+    text-align: right;
+}
+
+.port-row div:nth-child(2) {
+    width: 300px;
+}
+
+.port-row div:nth-child(3) {
+    width: 300px;
+}
+
+.port-triangles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.port-triangles div:nth-child(1) {
+    position: absolute;
+    width: 70vh;
+    height: 40vh;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: var(--mauve);
+    transform: translate(-16vh, -16vh) rotate(-21deg);
+    transition: var(--defaultTransition);
+    z-index: 1;
+}
+
+.port-triangles :nth-child(1):hover {
+    transform: translate(-16vh, -16vh) rotate(-21deg) scale(1.1);
+    transition: var(--defaultTransition);
+}

@@ -308,6 +308,18 @@
 }
 
 
+/* MAXHEIGHT MEDIA QUERIES */
+@media screen and (max-height: 600px) {
+    .contact-mail {
+        bottom: 15%;
+    }
+
+    .contact-line {
+        height: 5rem;
+    }
+}
+
+
 /* KEYFRAMES FOR CONTACT */
 @keyframes circle-1 {
     0% {

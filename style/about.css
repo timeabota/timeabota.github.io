@@ -229,3 +229,11 @@
         font-size: 0.8rem;
     }
 }
+
+
+/* MAXHEIGHT MEDIA QUERIES */
+@media screen and (max-height: 600px) {
+    .about-text h3 {
+        font-size: 0.7rem;
+    }
+}

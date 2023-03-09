@@ -323,7 +323,7 @@ span:hover {
     .service-click:hover {
         padding: 5px;
         background-color: var(--rose-pompadour);     
-        transform: translate(0, -75vh) scale(1.3);
+        transform: translate(0, -70vh) scale(1.3);
         transition: var(--defaultTransition);
     }
 
@@ -387,7 +387,7 @@ span:hover {
     }
 
     .service-click:hover {
-        transform: translate(calc(50vw + 2rem), -70vh) scale(1.3);
+        transform: translate(0px, -50px) scale(1.3);
     }
 
     .services-list {
@@ -419,6 +419,7 @@ span:hover {
         left: 0;
         transform: translate(-100vh, 0px);
         width: 100vw;
+        height: unset;
         padding: 1rem;
         font-size: 0.8rem;
         align-items: flex-start;
