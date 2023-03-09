@@ -26,8 +26,7 @@
 
 .show .services-list {
     opacity: 0.5;
-    
-    transform: var(--defaultTransition);
+    transition: var(--defaultTransition);
     transform: translate(0px, 0px);
 }
 .services-list:hover {
@@ -46,6 +45,7 @@
 
 .services-text div {
     opacity: 0;
+    font-size: 0.8rem;
     transform: translate(-50px, 0px);
     transition: var(--defaultTransition);
     position: absolute;
@@ -67,12 +67,6 @@
     transition: var(--defaultTransition);
 }
 
-.services-list:nth-of-type(1):hover ~ .services-text div:nth-child(1)  {
-    opacity: 1;
-    transform: translate(0px, 0px);
-    transition: var(--defaultTransition);
-} 
-
 .services-list:nth-of-type(1):hover ~ .dotted-background span {
     background-color: var(--mindaro);
     transition: var(--defaultTransition);
@@ -86,11 +80,6 @@
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(2):hover ~ .services-text div:nth-child(2)  {
-    opacity: 1;
-    transform: translate(0px, 0px);
-    transition: var(--defaultTransition);
-} 
 .services-list:nth-of-type(2):hover ~ .dotted-background span {
     background-color: #80C36F;
     transition: var(--defaultTransition);
@@ -104,11 +93,6 @@
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(3):hover ~ .services-text div:nth-child(3)  {
-    opacity: 1;
-    transform: translate(0px, 0px);
-    transition: var(--defaultTransition);
-} 
 .services-list:nth-of-type(3):hover ~ .dotted-background span {
     background-color: var(--aquamarine);
     transition: var(--defaultTransition);
@@ -122,11 +106,7 @@
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(4):hover ~ .services-text div:nth-child(4)  {
-    opacity: 1;
-    transform: translate(0px, 0px);
-    transition: var(--defaultTransition);
-}
+
 .services-list:nth-of-type(4):hover ~ .dotted-background span {
     background-color: #C4F094;
     transition: var(--defaultTransition);
@@ -140,11 +120,7 @@
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(5):hover ~ .services-text div:nth-child(5)  {
-    opacity: 1;
-    transform: translate(0px, 0px);
-    transition: var(--defaultTransition);
-}
+
 .services-list:nth-of-type(5):hover ~ .dotted-background span {
     background-color: #FFAF7D;
     transition: var(--defaultTransition);
@@ -158,11 +134,7 @@
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(6):hover ~ .services-text div:nth-child(6)  {
-    opacity: 1;
-    transform: translate(0px, 0px);
-    transition: var(--defaultTransition);
-}
+
 .services-list:nth-of-type(6):hover ~ .dotted-background span {
     background-color: #7EBDC2;
     transition: var(--defaultTransition);
@@ -304,16 +276,6 @@ span:hover {
     .services-list:hover {
         font-size: 1rem;
     }
-    /* .services-text {
-        height: 60vh;
-        width: 100vw;
-    }
-    .services-text:hover ~ .colored-background {
-        background: linear-gradient(
-            to right, var(--mindaro), var(--aquamarine), var(--indigo));
-        background-size: 400% 400%;
-        animation: animate-background 6s infinite ease-in-out;
-    } */
 
     .services-text div {
         width: 60vw;
@@ -323,7 +285,7 @@ span:hover {
     .service-click {
         display: block;
         position: absolute;
-        top: 90vh;
+        bottom: 5%;
         left: 1rem;
         text-align: left;
         z-index: 14;
@@ -361,6 +323,35 @@ span:hover {
 
     .colored-background:hover {
         background-color: #fff;
+    }
+
+    .services-list.show-service {
+        font-size: 1.1rem;
+        opacity: 1;
+    }
+    .web.show-service {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    .graphic.show-service {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    .brand.show-service {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    .logo.show-service {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    .illustration.show-service {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    .product.show-service {
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 }
 
@@ -405,5 +396,43 @@ span:hover {
 @media screen and (max-height:600px) {
     .services-text div {
         font-size: 0.7rem;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .services-list:nth-of-type(1):hover ~ .services-text div:nth-child(1)  {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: var(--defaultTransition);
+    } 
+    
+    .services-list:nth-of-type(2):hover ~ .services-text div:nth-child(2)  {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: var(--defaultTransition);
+    } 
+    
+    .services-list:nth-of-type(3):hover ~ .services-text div:nth-child(3)  {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: var(--defaultTransition);
+    } 
+    
+    .services-list:nth-of-type(4):hover ~ .services-text div:nth-child(4)  {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: var(--defaultTransition);
+    }
+    
+    .services-list:nth-of-type(5):hover ~ .services-text div:nth-child(5)  {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: var(--defaultTransition);
+    }
+    
+    .services-list:nth-of-type(6):hover ~ .services-text div:nth-child(6)  {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: var(--defaultTransition);
     }
 }
