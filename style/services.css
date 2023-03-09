@@ -1,17 +1,17 @@
 #services {
-    background-color: var(--aquamarine);
     height: 100vh;
     width: 100vw;
+    background-color: var(--aquamarine);
     overflow: hidden;
 }
 
 .services-relative-container {
     position: relative;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 .services-list {
@@ -44,10 +44,6 @@
 }
 
 .services-text div {
-    opacity: 0;
-    font-size: 0.8rem;
-    transform: translate(-50px, 0px);
-    transition: var(--defaultTransition);
     position: absolute;
     top: calc(50% - 30vh);
     left: calc(50% - 15vw);
@@ -55,6 +51,10 @@
     height: 60vh;
     display: flex;
     align-items: center;
+    opacity: 0;
+    font-size: 0.8rem;
+    transform: translate(-50px, 0px);
+    transition: var(--defaultTransition);   
 }
 
 .colored-background {
@@ -63,44 +63,52 @@
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 0;
     transition: var(--defaultTransition);
+    z-index: 0;
 }
 
 .services-list:nth-of-type(1):hover ~ .dotted-background span {
     background-color: var(--mindaro);
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(1):hover ~ .services-triangle {
     background-color: var(--mindaro);
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(1):hover ~ .colored-background {
     background-color: var(--mauve);
     transition: var(--defaultTransition);
 } 
 
+
 .services-list:nth-of-type(2):hover ~ .dotted-background span {
     background-color: #80C36F;
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(2):hover ~ .services-triangle {
     background-color: #80C36F;
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(2):hover ~ .colored-background {
     background-color: var(--yellow);
     transition: var(--defaultTransition);
 } 
 
+
 .services-list:nth-of-type(3):hover ~ .dotted-background span {
     background-color: var(--aquamarine);
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(3):hover ~ .services-triangle {
     background-color: var(--aquamarine);
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(3):hover ~ .colored-background {
     background-color: var(--indigo);
     transition: var(--defaultTransition);
@@ -111,10 +119,12 @@
     background-color: #C4F094;
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(4):hover ~ .services-triangle {
     background-color: #C4F094;
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(4):hover ~ .colored-background {
     background-color: #FFAF7D;
     transition: var(--defaultTransition);
@@ -125,10 +135,12 @@
     background-color: #FFAF7D;
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(5):hover ~ .services-triangle {
     background-color: #FFAF7D;
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(5):hover ~ .colored-background {
     background-color: var(--purple);
     transition: var(--defaultTransition);
@@ -139,10 +151,12 @@
     background-color: #7EBDC2;
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(6):hover ~ .services-triangle {
     background-color: #7EBDC2;
     transition: var(--defaultTransition);
 } 
+
 .services-list:nth-of-type(6):hover ~ .colored-background {
     background-color: #FFCC33;
     transition: var(--defaultTransition);
@@ -150,26 +164,26 @@
 
 .services-triangle {
     position: absolute;
-    right: 10vh;
     top: 13%;
+    right: 10vh;
     width: 80vh;
     height: 80vh;
     background-color: var(--yellow);
     clip-path: polygon(100% 9%, 0 0, 82% 100%);
-    z-index: 4;
     transition: all 1000ms ease-out;
+    z-index: 4;
 }
 
 .dotted-background { 
     position: absolute;
+    right: 15%;
+    height: 100%;
+    width: 20vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 100%;
-    width: 20vw;
     z-index: 2;
-    right: 15%;
 }
 
 .row {
@@ -192,26 +206,25 @@
 
 span:hover {
     background-color: var(--rose-pompadour);
-    /* box-shadow: 0px 0px 40px 5px var(--rose-pompadour); */
-    transition: all 100ms ease-in;
     transform: scale(2);
+    transition: all 100ms ease-in;
 }
 
 .hover-me {
     position: absolute;
-    padding: 0.5rem;
-    right: 28vh;
     top: 75%;
+    right: 28vh;
+    padding: 0.5rem;
     rotate: 50deg;
     font-size: 0.6rem;
-    z-index: 10;
     transition: var(--defaultTransition);
     cursor: default;
+    z-index: 10;
 }
 
 .hover-me:hover {
-    transform: rotate(360deg);
     color: var(--yellow);
+    transform: rotate(360deg);
 }
 
 .hover-me:hover ~ .services-triangle  {
@@ -220,29 +233,37 @@ span:hover {
     transition: var(--defaultTransition);
 }
 
+.hover-me:hover ~ .colored-background {
+    background: linear-gradient(
+        to right, var(--mindaro), var(--aquamarine), var(--indigo));
+    background-size: 100% 100%;
+}
+
 .service-click {
     display: none;
 }
 
+
+/* MAXWIDTH MEDIA QUERIES */
 @media screen and (max-width: 1280px) {
     .services-list {
         font-size: 1.2rem;
         padding: 2.5px;
     }
+
     .services-list:hover {
         font-size: 1.5rem;
     }
+
     .dotted-background {
         right: 0;
         width: 30vw;
     }
-    /* .hover-me {
-        right: 13%;
-        rotate: 59deg;
-    } */
+    
     .row {
         width: auto;
     }
+
     .services-text div {
         left: calc(50% - 14vw);
     }
@@ -252,9 +273,11 @@ span:hover {
     .services-list {
         margin-left: 70%;
     }  
+
     .services-list:hover {
         font-size: 1.3rem;
     }
+
     .services-text {
         font-size: 0.7rem;
     }
@@ -264,15 +287,19 @@ span:hover {
     .hover-me {
         display: none;
     }
+
     .dotted-background {
         left: 50%;
     }
+
     .services-triangle {
         right: unset;
     }
+
     .services-list {
         font-size: 0.8rem;
     }
+
     .services-list:hover {
         font-size: 1rem;
     }
@@ -283,42 +310,34 @@ span:hover {
     }
 
     .service-click {
-        display: block;
         position: absolute;
-        bottom: 5%;
+        bottom: 15%;
         left: 1rem;
-        text-align: left;
-        z-index: 14;
+        display: block;
         font-size: 0.5rem;
+        text-align: left;        
         transition: var(--defaultTransition);
+        z-index: 14;
     }
+
     .service-click:hover {
-        background-color: var(--rose-pompadour);
-        transform: translate(0, -75vh) scale(1.3);
         padding: 5px;
+        background-color: var(--rose-pompadour);     
+        transform: translate(0, -75vh) scale(1.3);
         transition: var(--defaultTransition);
     }
+
     .services-triangle:hover {
         background-color: var(--rose-pompadour);
         transform: scale(0.85);
         transition: var(--defaultTransition);
     }
+
     .services-triangle:hover ~ .colored-background {
         background: linear-gradient(
             to right, var(--mindaro), var(--aquamarine), var(--indigo));
         background-size: 400% 400%;
         animation: animate-background 6s infinite ease-in-out;
-    }
-    @keyframes animate-background {
-        0% {
-            background-position: 0 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0 50%;
-        }
     }
 
     .colored-background:hover {
@@ -329,26 +348,32 @@ span:hover {
         font-size: 1.1rem;
         opacity: 1;
     }
+
     .web.show-service {
         opacity: 1;
         transform: translate(0px, 0px);
     }
+
     .graphic.show-service {
         opacity: 1;
         transform: translate(0px, 0px);
     }
+
     .brand.show-service {
         opacity: 1;
         transform: translate(0px, 0px);
     }
+
     .logo.show-service {
         opacity: 1;
         transform: translate(0px, 0px);
     }
+
     .illustration.show-service {
         opacity: 1;
         transform: translate(0px, 0px);
     }
+
     .product.show-service {
         opacity: 1;
         transform: translate(0px, 0px);
@@ -360,28 +385,35 @@ span:hover {
         align-items: flex-start;
         justify-content: flex-start;
     }
+
     .service-click:hover {
         transform: translate(calc(50vw + 2rem), -70vh) scale(1.3);
     }
+
     .services-list {
         margin-left: 1rem;
         padding: unset;
         width: 60vw;
     }
+
     .show .services-list {
         font-size: 1.1rem;
         opacity: 1;
     }
+
     .show .services-list:hover {
         font-size: 1.5rem;
     }
+
     .services-list:nth-of-type(2) {
         margin-top: 5rem;
     }
+
     .services-triangle {
         top: 8%;
         right: -13%;
     }
+
     .services-text div {
         top: 13rem;
         left: 0;
@@ -393,12 +425,16 @@ span:hover {
     }
 }
 
+
+/* MAXHEIGHT MEDIA QUERIES */
 @media screen and (max-height:600px) {
     .services-text div {
         font-size: 0.7rem;
     }
 }
 
+
+/* MINWIDTH MEDIA QUERIES */
 @media screen and (min-width:769px) {
     .services-list:nth-of-type(1):hover ~ .services-text div:nth-child(1)  {
         opacity: 1;
@@ -434,5 +470,19 @@ span:hover {
         opacity: 1;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);
+    }
+}
+
+
+/* KEYYFRAMES FOR SERVICES */
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
     }
 }

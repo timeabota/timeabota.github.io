@@ -11,55 +11,56 @@
     top: 0px;
     right: 0px;
     height: 25vh;
+    padding-top: 2rem;
     display: flex;
     justify-content: flex-end;
-    padding-top: 2rem;
     z-index: 5;
 }
 
 .hello-container {
+    width: 30vw;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 30vw;
     z-index: 5;
 }
 
 .hello-container h2 {
     font-size: 1.3rem;
-    transform: translate(0px, 50px);
     opacity: 0;
-    transition: var(--defaultTransition);
     text-align: right;
+    transform: translate(0px, 50px);  
+    transition: var(--defaultTransition);
 }
 
 .hello-container h1 {
     font-size: 2rem;
+    opacity: 0;
     padding-bottom: 10px;
     transform: translate(0px, 50px);
-    opacity: 0;
     transition: var(--defaultTransition);
 }
 
 .lets-talk {
     position: relative;
     padding: 10px;
-    z-index: 5;
-    transform: translate(0px, 50px);
     opacity: 0;
+    transform: translate(0px, 50px);
     transition: var(--defaultTransition);
+    z-index: 5;
 }
+
 .lets-talk::before {
+    position: absolute;
+    left: 2.5px;
+    bottom: -2.5px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
     background-color: var(--yellow);
     border: 1px solid #000;
     content: "";
-    position: absolute;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    left: 2.5px;
-    bottom: -2.5px;
-    z-index: -1;
     transition: var(--defaultTransition);
+    z-index: -1;
 }
 
 .lets-talk:hover::before {
@@ -68,16 +69,16 @@
 }
 
 .lets-talk::after {
+    position: absolute;
+    left: -2.5px;
+    bottom: 2.5px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
     background-color: var(--purple);
     border: 1px solid #000;
     content: "";
-    position: absolute;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    left: -2.5px;
-    bottom: 2.5px;
-    z-index: -1;
     transition: var(--defaultTransition);
+    z-index: -1;
 }
 
 .lets-talk:hover::after {
@@ -86,63 +87,62 @@
 }
 
 .main-content {
-    display: flex;
     width: 40vw;
     padding-left: 2rem;
     padding-right: 2rem;
+    display: flex;
     font-size: 0.8rem;
-    z-index: 5;
-    transform: translate(0px, 50px);
     opacity: 0;
+    transform: translate(0px, 50px);
     transition: var(--defaultTransition);
-    
+    z-index: 5;
 }
 
 .main-pic {
     position: absolute;
     top: 130px;
-    rotate: -30deg;
-    background-image: url(../assets/Eszköz\ 1@4x.png);
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 60vw;
     height: 50vh;
+    rotate: -30deg;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: contain;
     z-index: 3;
 }
 
 .main-job {
     position: absolute;
+    bottom: 2rem;
+    width: 140px;
+    margin-left: 2rem;
     display: flex;
     align-items: center;
-    margin-left: 2rem;
-    width: 140px;
-    bottom: 2rem;
     font-size: 0.5rem;
     opacity: 1;
-    z-index: 16;
     transform: matrix(1, 0, 0, 1, 0, 1);
     transition: var(--defaultTransition);
+    z-index: 16;
 }
 
 .main-job:hover {
-    transform: scale(1.5);
-    background-color: var(--rose-pompadour);
     color: var(--yellow);
     cursor: default;
+    transform: scale(1.5);
+    background-color: var(--rose-pompadour);
 }
 
 .show-job {
     opacity: 0;
-    transition: var(--defaultTransition);
     transform: matrix(1, 0, 0, 1, -250, 1);
+    transition: var(--defaultTransition);
 }
 
 .main-triangles {
     position: absolute;
-    height: 100vh;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
 }
 
@@ -153,8 +153,8 @@
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     background: var(--yellow);
     transform: translate(-16vh, -16vh) rotate(-21deg);
-    z-index: 1;
     transition: var(--defaultTransition);
+    z-index: 1;
 }
 
 .main-triangles :nth-child(1):hover {
@@ -164,14 +164,14 @@
 
 .main-triangles :nth-child(2) {
     position: absolute;
-    width: 50vh;
-    height: 25vh;
     bottom: 0;
     right: 0;
+    width: 50vh;
+    height: 25vh;
     background: var(--yellow);
     clip-path: polygon(61% 50%, 100% 0, 100% 100%, 81% 100%);
-    z-index: 1;
     transition: var(--defaultTransition);
+    z-index: 1;
 }
 
 .main-triangles :nth-child(2):hover {
@@ -184,13 +184,13 @@
     position: absolute;
     width: 20px;
     height: 20px;
+    border-radius: 50%;
     background-color: #fff;
     mix-blend-mode: difference;
-    border-radius: 50%;
     pointer-events: none;
     transition: width 0.5s, height 0.5s;
-    z-index: 25;
     transform: translate(-50%, -50%);
+    z-index: 25;
 }
 
 .cursor.grow {
@@ -200,73 +200,81 @@
 }
 
 .show .main-content {
-    transform: translate(0px, 0px);
     opacity: 1;
+    transform: translate(0px, 0px);
     transition: var(--defaultTransition);
     transition-delay: .2s;
 }
 
 .show .hello-container h1 {
-    transform: translate(0px, 0px);
     opacity: 1;
+    transform: translate(0px, 0px);
     transition: var(--defaultTransition);
     transition-delay: .1s;
 }
 
 .show .hello-container h2 {
-    transform: translate(0px, 0px);
     opacity: 1;
+    transform: translate(0px, 0px);
     transition: var(--defaultTransition);
 }
 
 .show .lets-talk {
-    transform: translate(0px, 0px);
     opacity: 1;
+    transform: translate(0px, 0px);
     transition: var(--defaultTransition);
     transition-delay: .2;
 }
 
-@media screen and (min-width: 769px) {
-    .mobile-job {
-        display: none;
-    }
-}
-
+/* MAXWIDTH MEDIA QUERIES */
 @media screen and (max-width: 768px) {
     .main-job {
         display: none;
     }
+
     .main-triangles div:nth-child(1) {
         display: none;
     }
+
     .main-relative-container {
-        flex-direction: column;
-        padding: unset;
         height: 100vh;
+        padding: unset;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow: hidden;
     }
+
     .main-pic {
         top: 80px;
         left: 0px;
         rotate: 22deg;
     }
+
     .hello-container {
-        flex-direction: column;
         width: 100vw;
         margin-top: 30vh;
         padding: 1rem;
+        flex-direction: column;
     }
+
     .hello-container h1 {
         font-size: 0.7rem;
     }
+
     .main-content {
         width: 100vw;
-        font-size: 0.8rem;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-bottom: 0;
         padding-top: 0;
+        font-size: 0.8rem;
+    }
+}
+
+/* MINWIDTH MEDIA QUERIES */
+@media screen and (min-width: 769px) {
+    .mobile-job {
+        display: none;
     }
 }

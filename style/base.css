@@ -7,11 +7,10 @@
     --mindaro: #C4F094;
     --indigo: #A29DFF;
     --black: #000000;
-
     --mainFont: 'Questrial', sans-serif;
     --decorativeFont: 'Raleway Dots', cursive;
-    --defaultTransition: all 300ms ease-in-out;
     --scrollFont: 'Mulish', sans-serif;
+    --defaultTransition: all 300ms ease-in-out;
 }
 
 * {
@@ -20,8 +19,8 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color: var(--black);
     font-weight: normal;
+    color: var(--black);
 }
 
 html {
@@ -52,6 +51,13 @@ h3 {
     background: transparent;
 }
 
+::selection {
+    background-color: var(--rose-pompadour);
+    color: var(--yellow);
+}
+
+
+/* SCROLL SNAP */
 .scroll-container {
     scroll-snap-type: y mandatory;
     overflow: auto;
@@ -64,7 +70,7 @@ h3 {
 }  
 
 
-
+/* SCROLL TO EXPLORE */
 .cir {
     position: absolute;
     bottom: 2%;
@@ -76,8 +82,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 14;
     transition: var(--defaultTransition);
+    z-index: 14;
 }
 
 .cir:hover {
@@ -106,6 +112,16 @@ h3 {
     transform: scale(1.5);
     transition: var(--defaultTransition);
 }
+
+.cir-text span {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 37.5px;
+}
+
+
+
+/* KEYFRAMES FOR THE BASE THINGS */
 @keyframes rotateText {
     0% {
         transform: rotate(360deg);
@@ -115,37 +131,29 @@ h3 {
     }
 }
 
-.cir-text span {
-    position: absolute;
-    left: 50%;
-    transform-origin: 0 37.5px;
-}
-
-::selection {
-    background-color: var(--rose-pompadour);
-    color: var(--yellow);
-}
-
-/*minwidth query for bigger devices*/
+/* MINWIDTH QUERIES FOR BIGGER DEVICES */
 @media  screen and (min-width:2560px) {
     html {
         font-size: 35px;
     }
+
     .cir {
         transform: scale(1.1);
     }
 }
 
-/*max-width queries*/
+/* MAXWIDTH QUERIES */
 @media screen and (max-width:768px) {
     .cursor {
         display: none;
     }
+
     .scroll-container {
         scroll-snap-type: y proximity;
     }
+    
     .cir {
-        bottom: 1vh;
+        bottom: 2vh;
     }
 }
 

@@ -1,6 +1,6 @@
 #about {
-    background-color: var(--yellow);
     height: 100vh;
+    background-color: var(--yellow);
     overflow: hidden;
 }
 
@@ -22,43 +22,18 @@
     transition: var(--defaultTransition);
 }
 
-/* .show .about-photo-container {
-    animation: bounce-anim 500ms linear;
- }
-
-@keyframes bounce-anim {
-    0% {
-        transform: rotate(-30deg);
-    }
-    45% {
-        transform: rotate(15deg);  
-    }
-    75% {
-        transform: rotate(-20deg);  
-    }
-    85% {
-        transform: rotate(8deg);
-    }
-    95% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-} */
-
 .about-photo {
     position: absolute;
+    height: inherit;
+    width: inherit;
     background-image: url(../assets/001.jpg);
     background-size: cover;
     background-position: 0px -200px;
-    height: inherit;
-    width: inherit;
     background-repeat: no-repeat;
     clip-path: polygon(60% 100%, 0 0, 100% 15%);
-    z-index: 1;
     transform: scale(0.5);
     transition: var(--defaultTransition);
+    z-index: 1;
 }
 
 .photo-bck {
@@ -70,8 +45,8 @@
     background-color: var(--rose-pompadour);
     clip-path: polygon(60% 100%, 0 0, 100% 15%);
     transform: scale(1.2);
-    z-index: 0;
     transition: var(--defaultTransition);
+    z-index: 0;
 }
 
 .text-timea {
@@ -80,14 +55,14 @@
     left: 120px;
     rotate: -119deg;
     font-size: 3rem;
-    z-index: 5;
     transition: var(--defaultTransition);
+    z-index: 5;
 }
 
 .text-timea div:nth-child(1) {
-    font-family: var(--decorativeFont);
     margin-bottom: -70px;
     margin-left: 10px;
+    font-family: var(--decorativeFont);
 }
 
 .about-text {
@@ -97,26 +72,26 @@
 }
 
 .about-text h1 {
-    font-size: 1.5rem;
     margin-bottom: 1rem;
-    transform: translate(0px, 50px);
+    font-size: 1.5rem;
     opacity: 0;
+    transform: translate(0px, 50px);
     transition: var(--defaultTransition);
 }
 
 .about-text h3 {
     font-size: 0.8rem;
-    transform: translate(0px, 50px);
     opacity: 0;
+    transform: translate(0px, 50px);
     transition: var(--defaultTransition);
 }
 
 .about-triangle { 
     position: absolute;
-    width: 300px;
-    height: 200px;
     bottom: 0;
     right: 0;
+    width: 300px;
+    height: 200px;
     background-color: var(--rose-pompadour);
     clip-path: polygon(65% 10%, 100% 50%, 100% 100%, 13% 100%);
     transition: var(--defaultTransition);
@@ -133,38 +108,44 @@
 }
 
 .show .about-text h1 {
-    transform: translate(0px, 0px);
     opacity: 1;
+    transform: translate(0px, 0px);
     transition: var(--defaultTransition);
     transition-delay: .1s;
 }
 
 .show .about-text h3 {
-    transform: translate(0px, 0px);
     opacity: 1;
+    transform: translate(0px, 0px);
     transition: var(--defaultTransition);
     transition-delay: .2s;
 }
 
+
+/* MINWIDTH OPTIMALIZATION FOR BIGGER DEVICES */
 @media screen and (min-width: 1440px) {
     .about-photo-container:hover .photo-bck {
         transition: var(--defaultTransition);
     }
+
     .about-photo-container:hover {
         transform: scale(1.05);
         transition: var(--defaultTransition);
     }
+
     .about-triangle:hover {
         transform: scale(1.1);
         transition: var(--defaultTransition);
     }
 }
 
+/* MAXWIDTH MEDIA QUERIES */
 @media screen and (max-width: 1281px) {
     .about-text {
         width: 40vw;
         margin: 0 2rem 0 0;
     }
+
     .about-photo-container {
         transform: scale(0.8) translate(150px, 0px);
         transition: var(--defaultTransition);
@@ -175,13 +156,16 @@
     .about-text {
         width: 60vw;
     }
+
     .about-text h1 {
         font-size: 1.2rem;
     }
+
     .about-triangle {
         width: 250px;
         height: 180px;
     }
+
     .about-photo-container {
         transform: scale(0.7);
     }
@@ -191,24 +175,29 @@
     .about-relative-container {
         flex-direction: row-reverse;
     }
+
     .about-triangle {
-        transform: scale(-1, 1);
         left: 0;
+        transform: scale(-1, 1);
     }
+
     .about-photo-container {
         transform: translate(24vw, 5vh) scale(0.8);
     }
+
     .about-text {
         position: absolute;
         top: 20vh;
         left: 0;
+        width: 60vw;
         margin: unset;
         margin-left: 1rem;
-        width: 60vw;
     }
+
     .about-text h1 {
         font-size: 1.1rem;
     }
+
     .about-text h3 {
         font-size: 0.7rem;
     }
@@ -218,20 +207,24 @@
     .about-photo-container {
         transform: translate(2vw, -20vh) scale(0.5);
     }
+
     .text-timea {
         left: -60px;
         top: 100px;
     }
+
     .about-text {
-        margin: unset;
         top: 40vh;
         left: 1rem;
         width: calc(100vw - 2rem);
+        margin: unset;
     }
+
     .about-text h1 {
-        font-size: 1.2rem;
         width: 70vw;
+        font-size: 1.2rem;
     }
+
     .about-text h3 {
         font-size: 0.8rem;
     }
