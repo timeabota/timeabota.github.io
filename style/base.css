@@ -66,7 +66,7 @@ h3 {
 }
 
 .scroll-section {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }  
 
 

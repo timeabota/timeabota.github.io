@@ -25,6 +25,7 @@
 }
 
 .port-table {
+    padding: 50px;
     display: flex;
     flex-direction: column;
     z-index: 10;
@@ -32,19 +33,29 @@
 
 .port-table div {
     padding-left: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
     font-size: 0.8rem;
+    transition: var(--defaultTransition);
 }
 
 .port-row {
     display: flex;
     flex-direction: row;
     padding-right: 2rem;
+    transition: var(--defaultTransition);
 }
 
 .port-row:hover {
     background-color: var(--mauve);
     transition: var(--defaultTransition);
     cursor: pointer;
+}
+
+.port-row:hover div {
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition: var(--defaultTransition);
 }
 
 .port-row div:nth-child(1) {
@@ -82,5 +93,21 @@
 
 .port-triangles :nth-child(1):hover {
     transform: translate(-16vh, -16vh) rotate(-21deg) scale(1.1);
+    transition: var(--defaultTransition);
+}
+
+.port-triangles div:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30vw;
+    height: 20vh;
+    background-color: var(--mauve);
+    clip-path: polygon(65% 10%, 100% 50%, 100% 100%, 13% 100%);
+    transform: scale(-1, 1);
+}
+
+.port-triangles :nth-child(2):hover {
+    transform: scale(1.1);
     transition: var(--defaultTransition);
 }

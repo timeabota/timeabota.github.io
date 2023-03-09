@@ -17,7 +17,7 @@
 .services-list {
     width: 30vw;
     margin-left: 65%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     opacity: 0;
     transition: var(--defaultTransition);
     transform: translate(50px, 0px);
@@ -30,7 +30,7 @@
     transform: translate(0px, 0px);
 }
 .services-list:hover {
-    font-size: 2rem;
+    font-size: 1.8rem;
     opacity: 1;
     transition: var(--defaultTransition);
     cursor: default;
@@ -471,6 +471,16 @@ span:hover {
         opacity: 1;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);
+    }
+}
+
+@media screen and (min-width:1680px) {
+    .services-list {
+        font-size: 1.8rem;
+    }
+
+    .services-list:hover {
+        font-size: 2rem;
     }
 }
 
