@@ -1,7 +1,7 @@
 #portfolio {
     background-color: var(--mindaro);
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .portfolio-relative-container {
@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .port-title {
@@ -96,18 +96,57 @@
     transition: var(--defaultTransition);
 }
 
-.port-triangles div:nth-child(2) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 30vw;
-    height: 20vh;
-    background-color: var(--mauve);
-    clip-path: polygon(65% 10%, 100% 50%, 100% 100%, 13% 100%);
-    transform: scale(-1, 1);
-}
 
-.port-triangles :nth-child(2):hover {
-    transform: scale(1.1);
-    transition: var(--defaultTransition);
-}
+/* MAXWIDTH MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    #portfolio,
+    .portfolio-relative-container {
+        overflow: hidden;
+    }
+
+    .portfolio-relative-container {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    
+    .port-title {
+        font-size: 1.1rem;
+        border-bottom: unset;
+        margin: unset;
+        padding: unset;
+        margin: 5px;
+    }
+
+    .port-table {
+        height: 70vh;
+        width: 100vw;
+        padding: unset;
+        margin-bottom: 1rem;
+        justify-content: space-evenly;
+    }
+
+    .port-table div {
+        padding: unset;
+    }
+
+    .port-row {
+        height: inherit;
+        /* padding: unset; */
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #000;
+    }
+
+    .port-row div { 
+        font-size: 0.7rem;
+    }
+
+    .port-row div:nth-child(1) {
+        padding-right: 5px;
+    }
+
+} 
+
+
+
+/**/

@@ -1,7 +1,7 @@
 #contact {
     height: 100%;
     background-color: var(--indigo);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .contact-relative-container {
@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .contact-left {
@@ -66,15 +66,16 @@
 
 .contact-triangles div:nth-child(1) {
     position: absolute;
-    width: 40vh;
-    height: 30vh;
-    clip-path: polygon(25% 0, 73% 0, 91% 86%, 0 66%, 0 37%);
+    width: 60vh;
+    height: 50vh;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     background: var(--aquamarine);
+    transform: translate(-16vh, -16vh) rotate(-21deg);
     transition: var(--defaultTransition);
 }
 
 .contact-triangles div:nth-child(1):hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(21deg);
     transition: var(--defaultTransition);
 }
 
@@ -254,6 +255,11 @@
 }
 
 @media screen and (max-width: 768px) {
+    #contact,
+    .contact-relative-container {
+        overflow: hidden;
+    }
+
     .show .contact-line  {
         display: none;
     }

@@ -1,4 +1,4 @@
-//scrollcircle
+//scroll circle
 const text = document.querySelector('.cir-text p');
 text.innerHTML = text.innerText.split("").map((char, i) => `<span style="transform:rotate(${i * 18}deg)">${char}</span>`
 ).join("")
@@ -161,10 +161,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
                     span.classList.add('fade');
                 }, (idx + 1) * 50)
             })
-        }, 2500);
+        }, 1500);
 
         setTimeout(()=>{
             intro.style.top = '-100vh';
-        }, 2800);
+        }, 1800);
     })
 })
