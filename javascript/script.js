@@ -104,7 +104,7 @@ const observer = new IntersectionObserver((sections) => {
     })
 },
 {
-    threshold: 0.7
+    threshold: 0.5
 });
 
 //observer invoke

@@ -4,6 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-color: var(--black);
     transition: var(--defaultTransition);
     z-index: 30;

@@ -116,6 +116,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .active ~ .nav-list li {
+        transition-delay: 0.5s;
+    }
+
     .header {
         width: 100vw;
         height: unset;
@@ -148,7 +152,6 @@
     }
 
     .mobile-job {
-        position: absolute;
         bottom: 1rem;
         width: 100%;
         height: 2rem;
@@ -167,6 +170,7 @@
     } 
 
     .active .mobile-job {
+        margin-top: 2rem;
         transform: scale(1);
         transition: var(--defaultTransition);
         transition-delay: 0.2s;
