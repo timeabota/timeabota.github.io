@@ -75,7 +75,7 @@
 }
 
 .contact-triangles div:nth-child(1):hover {
-    transform: scale(1.1) rotate(21deg);
+    transform: translate(-16vh, -16vh) scale(1.1) rotate(-10deg);
     transition: var(--defaultTransition);
 }
 
@@ -91,7 +91,7 @@
 }
 
 .contact-triangles div:nth-child(2):hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(5deg);
     transition: var(--defaultTransition);
 }
 

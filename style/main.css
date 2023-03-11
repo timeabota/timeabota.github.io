@@ -158,7 +158,7 @@
 }
 
 .main-triangles :nth-child(1):hover {
-    transform: translate(-16vh, -16vh) rotate(-21deg) scale(1.1);
+    transform: translate(-16vh, -16vh) rotate(-10deg) scale(1.1);
     transition: var(--defaultTransition);
 }
 

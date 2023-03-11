@@ -53,8 +53,7 @@
 }
 
 .port-row:hover div {
-    font-size: 0.9rem;
-    font-weight: 800;
+    font-size: 0.85rem;
     transition: var(--defaultTransition);
 }
 
@@ -92,7 +91,25 @@
 }
 
 .port-triangles :nth-child(1):hover {
-    transform: translate(-16vh, -16vh) rotate(-21deg) scale(1.1);
+    transform: translate(-16vh, -16vh) rotate(-10deg) scale(1.1);
+    transition: var(--defaultTransition);
+}
+
+.port-triangles div:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40vh;
+    height: 30vh;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: var(--mauve);
+    transform: rotate(75deg);
+    transition: var(--defaultTransition);
+    z-index: 1;
+}
+
+.port-triangles div:nth-child(2):hover {
+    transform: rotate(60deg) scale(1.1);
     transition: var(--defaultTransition);
 }
 
