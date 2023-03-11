@@ -53,7 +53,7 @@ links.forEach((link) => {
 //variables
 const menuList = document.querySelectorAll('.nav-list-a');
 const sections = document.querySelectorAll('.scroll-section');
-const lfp = document.querySelector(".main-job");
+const lfp = document.querySelector(".infinite-job");
 
 //menu class toggler function
 const menuClasser = observable => menuList.forEach(menu => menu.id.indexOf(observable.id) > -1 ? menu.classList.add("scale") : menu.classList.remove("scale"));

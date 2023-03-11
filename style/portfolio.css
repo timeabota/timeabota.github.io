@@ -17,15 +17,22 @@
 }
 
 .port-title {
-    padding-right: 2rem;
-    margin-bottom: 20px;
+    width: 70vw;
     font-size: 1.5rem;
     border-bottom: 1px solid black;
+    opacity: 0;
+    transform: translate(50px, 0px);
     z-index: 10;
 }
 
+.show .port-title {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 1s ease-in-out;
+}
+
 .port-table {
-    padding: 50px;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     z-index: 10;
@@ -42,32 +49,74 @@
 .port-row {
     display: flex;
     flex-direction: row;
-    padding-right: 2rem;
+    opacity: 0;
+    transform: translate(50px, 0px);
     transition: var(--defaultTransition);
-}
-
-.port-row:hover {
-    background-color: var(--mauve);
-    transition: var(--defaultTransition);
-    cursor: pointer;
 }
 
 .port-row:hover div {
     font-size: 0.85rem;
+    background-color: var(--mauve);
     transition: var(--defaultTransition);
 }
 
 .port-row div:nth-child(1) {
-    width: 100px;
+    width: 5vw;
     text-align: right;
 }
 
 .port-row div:nth-child(2) {
-    width: 300px;
+    width: 30vw;
 }
 
 .port-row div:nth-child(3) {
-    width: 300px;
+    width: 35vw;
+}
+
+.show .port-row {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    transition: var(--defaultTransition);
+}
+
+.show .port-row:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.show .port-row:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.show .port-row:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.show .port-row:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.show .port-row:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.show .port-row:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.show .port-row:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
+.show .port-row:nth-child(8) {
+    transition-delay: 0.8s;
+}
+
+.show .port-row:nth-child(9) {
+    transition-delay: 0.9s;
+}
+
+.show .port-row:nth-child(10) {
+    transition-delay: 1s;
 }
 
 .port-triangles {
@@ -112,6 +161,7 @@
     transform: rotate(60deg) scale(1.1);
     transition: var(--defaultTransition);
 }
+
 
 
 /* MAXWIDTH MEDIA QUERIES */

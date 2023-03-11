@@ -224,7 +224,6 @@ span:hover {
 
 .hover-me:hover {
     color: var(--yellow);
-    transform: rotate(360deg);
 }
 
 .hover-me:hover ~ .services-triangle  {
