@@ -1,25 +1,3 @@
-//respo menu
-const toggleButton = document.querySelector('.toggle-button');
-const navList = document.querySelector('.nav-list');
-
-const addClasses = (target, clss) => {
-    document.querySelector(`${target}`).classList.toggle(`${clss}`);    
-}
-
-if (window.innerWidth <= 768) {
-    //nav - bar&toggle button invoke
-    toggleButton.addEventListener('click', () => addClasses('.toggle-button', 'open'));
-    toggleButton.addEventListener('click', () => addClasses('.nav-list', 'active'));
-
-    navList.addEventListener('click', () => removeClasses('.toggle-button', 'open'));
-    navList.addEventListener('click', () => removeClasses('.nav-list', 'active'));
-
-    //services show class function invoke
-    // servicesMenu.forEach(service => service.addEventListener("touchstart", () => showService()));
-    showService();
-} 
-
-
 //splash screen
 let intro = document.querySelector('.intro');
 let logo = document.querySelector('.logo-header');

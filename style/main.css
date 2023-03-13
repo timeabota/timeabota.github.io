@@ -251,6 +251,12 @@
 }
 
 /* MAXWIDTH MEDIA QUERIES */
+@media screen and (max-width: 1280px) {
+    .infinite-job {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .infinite-job {
         display: none;

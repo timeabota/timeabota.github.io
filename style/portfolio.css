@@ -165,6 +165,41 @@
 
 
 /* MAXWIDTH MEDIA QUERIES */
+@media screen and (max-width: 960px) {
+    .portfolio-relative-container {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .port-title {
+        padding-right: 10px;
+        border: unset;
+        text-align: right;
+    }
+
+    .port-table {
+        margin: unset;
+    }
+
+    .port-row {
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+    
+    .port-row:nth-child(even) {
+        background-color: #b9ed82c9;
+    }
+
+    .port-row div:nth-child(2) {
+        width: 26vw;
+    }
+
+    .port-row div:nth-child(3) {
+        width: 33vw;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #portfolio,
     .portfolio-relative-container {
@@ -173,15 +208,21 @@
 
     .portfolio-relative-container {
         justify-content: flex-end;
-        align-items: flex-start;
+        align-items: center;
     }
     
     .port-title {
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        max-width: 50vw;
+        margin: 0;
+        margin-bottom: 1rem;
+        padding: 0;
+        padding-left: 1rem;
         font-size: 1.1rem;
         border-bottom: unset;
-        margin: unset;
-        padding: unset;
-        margin: 5px;
+        text-align: left;
     }
 
     .port-table {
@@ -201,6 +242,7 @@
         /* padding: unset; */
         display: flex;
         align-items: center;
+        justify-content: space-around;
         border-top: 1px solid #000;
     }
 
@@ -212,8 +254,30 @@
         padding-right: 5px;
     }
 
+    .port-row div:nth-child(2) {
+        max-width: 50vw;
+    }
+
+    .port-row div:nth-child(3) {
+        max-width: 50vw;
+    }
+
+
+    .port-pic-1, .port-pic-2, .port-pic-3, .port-pic-4, .port-pic-5, .port-pic-6, .port-pic-7, .port-pic-8, .port-pic-9, .port-pic-10 {
+        display: none;
+    }
 } 
 
 
 
-/**/
+/*MAXHEIGHT*/
+@media screen and (max-height: 600px) {
+    .port-title {
+        font-size: 1rem;
+    }
+
+    .port-table div {
+        font-size: 0.7rem;
+        padding: unset;
+    }
+}
