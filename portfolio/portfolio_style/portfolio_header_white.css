@@ -1,0 +1,50 @@
+.header {
+    position: fixed;
+    height: 100vh;
+    width: 50px;
+    z-index: 15;
+}
+
+.logo {
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    color: #fff;
+}
+
+.name {
+    font-size: 0.8rem;
+    width: 300px;
+    padding-left: 2rem;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .logo {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        width: 100px;
+        padding: unset;     
+        padding-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 18;
+    }
+
+    .name {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        width: unset;
+        padding: unset;
+        padding-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+    }
+}

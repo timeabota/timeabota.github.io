@@ -30,7 +30,6 @@ window.addEventListener('DOMContentLoaded', ()=> {
 })
 
 const topContainer = document.querySelector('.top-container');
-console.log(topContainer);
 
 
 //observer
@@ -48,3 +47,5 @@ console.log(topContainer);
 // })
 
 // observer.observe(topContainer);
+
+
