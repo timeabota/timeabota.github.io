@@ -152,7 +152,7 @@
 .infinite-job:hover {
     cursor: default;
     transform: translate(0, calc(-50vh + 6rem));
-    background-color: var(--indigo);
+    background-color: var(--yellow);
 }
 
 .show-job {

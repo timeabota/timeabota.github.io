@@ -1,0 +1,39 @@
+.intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--black);
+    transition: var(--defaultTransition);
+    z-index: 30;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-intro {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    bottom: -20px;
+    opacity: 0;
+    transition: var(--defaultTransition);
+}
+
+.logo-intro.active-intro {
+    bottom: 0;
+    opacity: 1;
+    transition: var(--defaultTransition);
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: var(--defaultTransition);
+}
