@@ -21,10 +21,30 @@ window.addEventListener('DOMContentLoaded', ()=> {
                     span.classList.add('fade');
                 }, (idx + 1) * 50)
             })
-        }, 1500);
+        }, 1000);
 
         setTimeout(()=>{
             intro.style.top = '-100vh';
-        }, 1800);
+        }, 1300);
     })
 })
+
+const topContainer = document.querySelector('.top-container');
+console.log(topContainer);
+
+
+//observer
+// const observer = new IntersectionObserver (entries => {
+//     entries.forEach(entry => {
+//         if(entry.isIntersecting){
+//             topContainer.classList.add('fadeintop');
+//         } else {
+//             topContainer.classList.remove('fadeintop');
+//         }
+//     })
+// },
+// {
+//     threshold: 1
+// })
+
+// observer.observe(topContainer);

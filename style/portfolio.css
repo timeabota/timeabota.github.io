@@ -186,6 +186,10 @@
         display: flex;
         align-items: center;
     }
+
+    .port-row:hover div {
+        background-color: unset;
+    }
     
     .port-row:nth-child(even) {
         background-color: #b9ed82c9;
@@ -207,7 +211,7 @@
     }
 
     .portfolio-relative-container {
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
     }
     
@@ -229,7 +233,7 @@
         height: 70vh;
         width: 100vw;
         padding: unset;
-        margin-bottom: 1rem;
+        margin-top: 35%;
         justify-content: space-evenly;
     }
 

@@ -1,10 +1,181 @@
-.flokika {
-    display: block;
+.top-container {
+    width: 100vw;
+    height: 30vh;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: #faebd7;
+    /* opacity: 0;
+    transform: translate(0px, -220px);
+    transition: all 0.3s ease-in-out; */
+}
+
+.back-main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    position: fixed;
+    right: 2rem;
+    top: 3rem;
+    z-index: 10;
+}
+
+.back {
+    font-size: 0.6rem;
+}
+
+.arrow div:nth-child(1) {
+    width: 170px;
+    height: 2px;
+    background-color: black;
+}
+
+.arrow div:nth-child(2) {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transform: translate(-4px, 8px) rotate(45deg);
+}
+
+.arrow div:nth-child(3) {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transform: translate(-4px, -14px) rotate(-45deg);
+}
+
+.top-container p {
+    font-size: 0.7rem;
+}
+
+.pic-desktop-container {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    background-image: url('../../assets/IMG_6187.JPG');
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 80vh;
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pic-desktop-container div {
+    transition: var(--defaultTransition);
+}
+
+.pic-desktop-container div:hover {
+    transform: scale(1.2);
+    transition: var(--defaultTransition);
+}
+
+.pic-desktop-container div:first-child {
+    background-image: url(../portfolio_assets/001_hero.png);
+    width: 60vw;
+    height: 60vh;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pic-desktop-container div:nth-child(2) {
+    background-image: url(../portfolio_assets/001_about.png);
+    width: 60vw;
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pic-desktop-container div:nth-child(3) {
+    background-image: url(../portfolio_assets/001_massages.png);
+    width: 60vw;
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pic-desktop-container div:nth-child(4) {
+    background-image: url(../portfolio_assets/001_prices.png);
+    width: 60vw;
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pic-desktop-container div:nth-child(5) {
+    background-image: url(../portfolio_assets/001_footer.png);
+    width: 60vw;
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pic-mobile-container {
+    display: flex;
+    width: 100vw;
+    padding: 0rem 2rem;
+    background-color: #fff;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-mobile-container div {
+    width: 30vw;
+    height: 90vh;
+    margin-bottom: 2rem;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: var(--defaultTransition);
+}
+
+.pic-mobile-container div:hover {
+    transform: scale(1.1);
+    transition: var(--defaultTransition);
+}
+
+.pic-mobile-container div:nth-child(1) {
+    background-image: url(../portfolio_assets/001_hero_mobile.png);
+}
+
+.pic-mobile-container div:nth-child(2) {
+    background-image: url(../portfolio_assets/001_about_mobile.png);
+}
+
+.pic-mobile-container div:nth-child(3) {
+    background-image: url(../portfolio_assets/001_massages_mobile.png);
+}
+
+.pic-mobile-container div:nth-child(4) {
+    background-image: url(../portfolio_assets/001_prices_mobile.png);
+}
+
+.pic-mobile-container div:nth-child(5) {
+    background-image: url(../portfolio_assets/001_footer_mobile.png);
+}
+
+.bottom-container {
+    width: 100vw;
+    padding: 0rem 15% 2rem;
+    text-align: right;
+}
+
+.footer {
+    width: 100vw;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 0.5rem;
+    z-index: 10;
+}
+
+.fadeintop {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: var(--defaultTransition);
 }
