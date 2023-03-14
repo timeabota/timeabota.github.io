@@ -87,8 +87,7 @@
 
 .pic-desktop-container div {
     width: 80vw;
-    height: 70vh;
-    margin: 1rem;
+    padding-bottom: 53.25%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -278,6 +277,14 @@
         justify-content: space-evenly;
         padding: 1rem 1rem 0rem;
     }
+
+    .pic-desktop-container {
+        padding: unset;
+    }
+
+    .pic-desktop-container div {
+        width: 90vw;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -293,7 +300,7 @@
         width: 45vw;
     }
     .pic-desktop-container div {
-        min-height: 20vh;
+        width: 100vw;
     }
     .pic-desktop-container div:hover {
         transform: scale(1.6);

@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: var(--black);
+    background-color: #fff;
     transition: var(--defaultTransition);
     z-index: 30;
 }
@@ -20,7 +20,7 @@
 .logo-intro {
     position: relative;
     display: inline-block;
-    color: #ffffff;
+    color: black;
     bottom: -20px;
     opacity: 0;
     transition: var(--defaultTransition);
