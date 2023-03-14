@@ -73,9 +73,15 @@
     transform: translate(-4px, -14px) rotate(-45deg);
 }
 
+.top-container h1 {
+    z-index: 5;
+}
+
 .top-container p {
     font-size: 0.7rem;
     color: #fff;
+    text-align: right;
+    z-index: 5;
 }
 
 .pic-container {
@@ -103,19 +109,19 @@
     transition: var(--defaultTransition);
 }
 
-.pic-container div:nth-child(1) {
+.pic-container div:nth-child(2) {
     background-image: url('../portfolio_assets/004_code.png');
 }
 
-.pic-container div:nth-child(2) {
+.pic-container div:nth-child(1) {
     background-image: url('../portfolio_assets/004_product.png');
 }
 
-.pic-container div:nth-child(3) {
+.pic-container div:nth-child(4) {
     background-image: url('../portfolio_assets/004_hello.png');
 }
 
-.pic-container div:nth-child(4) {
+.pic-container div:nth-child(3) {
     background-image: url('../portfolio_assets/004_moodboard.png');
 }
 
@@ -147,7 +153,6 @@
     padding-bottom: 10px;
     text-align: center;
     font-size: 0.5rem;
-    z-index: 10;
     background-color: #180d1c;
     color: #fff;
 }
@@ -238,6 +243,56 @@
 .bot-triangles :nth-child(2):hover {
     transform:  rotate(160deg) scale(1.1);
     transition: var(--defaultTransition);
+}
+
+/* MAXWIDTH MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    .back-main {
+        right: unset;
+        left: 1rem;
+    }
+
+    .top-container {
+        padding: 0.5rem 1rem;
+        height: 35vh;
+    }
+
+    .top-triangles div:nth-child(2) {
+        display: none;
+    }
+
+    .pic-container {
+        padding: unset;
+    }
+
+    .pic-container div {
+        width: 100vw;
+        height: 100vw;
+        margin: unset;
+        margin-top: 1rem;
+    }
+
+    .bottom-container {
+        padding: 1rem;
+    }
+
+    .bottom-container p, .bottom-container h2 {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .top-container {
+        height: 40vh;
+    }
+    .top-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .arrow div:nth-child(1) {
+        width: 155px;
+    }
+
 }
 
 .fadeintop {

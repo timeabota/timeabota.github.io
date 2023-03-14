@@ -293,7 +293,10 @@
         width: 45vw;
     }
     .pic-desktop-container div {
-        height: 50vh;
+        min-height: 20vh;
+    }
+    .pic-desktop-container div:hover {
+        transform: scale(1.6);
     }
     .top-triangles div:nth-child(2) {
         display: none;
@@ -304,6 +307,7 @@
     .bottom-container p, .bottom-container h2 {
         font-size: 0.8rem;
     }
+
 }
 
 @media screen and (max-width: 650px) {
