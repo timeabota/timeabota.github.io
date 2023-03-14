@@ -1,11 +1,4 @@
 :root {
-    --purple: #CB77DD;
-    --yellow: #FFE267;
-    --rose-pompadour: #F07292;
-    --aquamarine: #00F5D4;
-    --mauve: #FFC1FF;
-    --mindaro: #C4F094;
-    --indigo: #A29DFF;
     --black: #000000;
     --mainFont: 'Questrial', sans-serif;
     --decorativeFont: 'Raleway Dots', cursive;
@@ -26,6 +19,7 @@
 html {
     font-size: 25px;
     min-width: 280px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +28,7 @@ body {
 
 h1 {
     font-size: 1.5rem;
+    text-align: right;
 }
 
 h3 {
@@ -47,6 +42,13 @@ h3 {
 }
 
 ::selection {
-    background-color: var(--rose-pompadour);
-    color: var(--yellow);
+    background-color: #000;
+    color: #fff;
+}
+
+/* MAXHEIGHT MEDIA QUERIES */
+@media screen and (max-height: 650px) {
+    html {
+        font-size: 20px;
+    }
 }

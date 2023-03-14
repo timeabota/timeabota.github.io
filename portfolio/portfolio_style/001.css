@@ -1,12 +1,12 @@
 .top-container {
     width: 100vw;
     height: 30vh;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    background-color: #faebd7;
+    background-color: #E2CDB6;
     /* opacity: 0;
     transform: translate(0px, -220px);
     transition: all 0.3s ease-in-out; */
@@ -64,14 +64,20 @@
     transform: translate(-4px, -14px) rotate(-45deg);
 }
 
+.top-container h1 {
+    z-index: 5;
+}
+
 .top-container p {
     font-size: 0.7rem;
+    text-align: right;
+    z-index: 5;
 }
 
 .pic-desktop-container {
     position: relative;
     width: 100vw;
-    min-height: 80vh;
+    height: 100%;
     background-color: #fff;
     padding: 0rem 2rem 2rem;
     display: flex;
@@ -80,57 +86,37 @@
 }
 
 .pic-desktop-container div {
+    width: 80vw;
+    height: 70vh;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     transition: var(--defaultTransition);
 }
 
 .pic-desktop-container div:hover {
     transform: scale(1.2);
-    transition: var(--defaultTransition);
 }
 
 .pic-desktop-container div:first-child {
-    background-image: url(../portfolio_assets/001_hero.png);
-    width: 60vw;
-    height: 60vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-image: url(../portfolio_assets/001_hero.png); 
 }
 
 .pic-desktop-container div:nth-child(2) {
     background-image: url(../portfolio_assets/001_about.png);
-    width: 60vw;
-    height: 60vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .pic-desktop-container div:nth-child(3) {
     background-image: url(../portfolio_assets/001_massages.png);
-    width: 60vw;
-    height: 60vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .pic-desktop-container div:nth-child(4) {
     background-image: url(../portfolio_assets/001_prices.png);
-    width: 60vw;
-    height: 60vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .pic-desktop-container div:nth-child(5) {
     background-image: url(../portfolio_assets/001_footer.png);
-    width: 60vw;
-    height: 60vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .pic-mobile-container {
@@ -179,10 +165,16 @@
 }
 
 .bottom-container {
+    position: relative;
     width: 100vw;
     padding: 4rem 15% 6rem;
     text-align: right;
-    background-color: #faebd7;
+    background-color: #E2CDB6;
+}
+
+.bottom-container p, .bottom-container h2 {
+    position: inherit;
+    z-index: 5;
 }
 
 .footer {
@@ -190,9 +182,155 @@
     padding-bottom: 10px;
     text-align: center;
     font-size: 0.5rem;
-    background-color: #faebd7;
-    z-index: 10;
+    background-color: #E2CDB6;
 }
+
+.top-triangles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+    z-index: 1;
+}
+
+.top-triangles div:nth-child(1) {
+    position: absolute;
+    width: 55vh;
+    height: 35vh;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #dbc0a2;
+    transform: translate(-16vh, -16vh) rotate(-21deg);
+    transition: var(--defaultTransition);
+    z-index: 1;
+}
+
+.top-triangles div:nth-child(1):hover {
+    transform: translate(-16vh, -16vh) rotate(-10deg) scale(1.1);
+    transition: var(--defaultTransition);
+}
+
+.top-triangles div:nth-child(2) {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 30vh;
+    height: 20vh;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #dbc0a2;
+    transform: translate(-16vh, -16vh) rotate(-21deg);
+    transition: var(--defaultTransition);
+    z-index: 1;
+}
+
+.top-triangles div:nth-child(2):hover {
+    transform: translate(-16vh, -16vh) rotate(-10deg) scale(1.1);
+    transition: var(--defaultTransition);
+}
+
+.bot-triangles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bot-triangles div:nth-child(1) {
+    position: absolute;
+    width: 55vh;
+    height: 35vh;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #dbc0a2;
+    transform: rotate(-21deg);
+    transition: var(--defaultTransition);
+    z-index: 1;
+}
+
+.bot-triangles div:nth-child(1):hover {
+    transform: rotate(-10deg) scale(1.1);
+    transition: var(--defaultTransition);
+}
+
+.bot-triangles div:nth-child(2) {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    width: 30vh;
+    height: 20vh;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #dbc0a2;
+    transform: rotate(150deg);
+    transition: var(--defaultTransition);
+    z-index: 1;
+
+}
+
+.bot-triangles :nth-child(2):hover {
+    transform:  rotate(160deg) scale(1.1);
+    transition: var(--defaultTransition);
+}
+
+@media screen and (max-width: 1280px) {
+    .pic-mobile-container {
+        justify-content: space-evenly;
+        padding: 1rem 1rem 0rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .back-main {
+        right: unset;
+        left: 1rem;
+    }
+    .top-container {
+        padding: 0.5rem 1rem;
+        height: 35vh;
+    }
+    .pic-mobile-container div {
+        width: 45vw;
+    }
+    .pic-desktop-container div {
+        height: 50vh;
+    }
+    .top-triangles div:nth-child(2) {
+        display: none;
+    }
+    .bottom-container {
+        padding: 1rem;
+    }
+    .bottom-container p, .bottom-container h2 {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .top-container {
+        height: 40vh;
+    }
+    .top-container h1 {
+        font-size: 1.3rem;
+    }
+    .pic-mobile-container div {
+        width: 90vw;
+    }
+    .pic-desktop-container div {
+        margin: unset;
+        margin-bottom: 10px;
+        
+        width: 100vw;
+    }
+    .arrow div:nth-child(1) {
+        width: 155px;
+    }
+    .pic-desktop-container {
+        padding: unset;
+    }
+}
+
+
 
 .fadeintop {
     opacity: 1;

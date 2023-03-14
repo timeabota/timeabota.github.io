@@ -115,12 +115,12 @@
     overflow: hidden;
     left: 0;
     bottom: 1rem;
-    height: 0.5rem;
+    height: 1rem;
     width: 15rem;
     font-size: 0.5rem;
     opacity: 1;
+    transform: translate(0, calc(-50vh + 6.5rem));
     transition: var(--defaultTransition);
-    transform: translate(0, calc(-50vh + 6rem));
     z-index: 16;
 }
 
@@ -130,7 +130,8 @@
     left: 0;
     height: 100%;
     padding-left: 50%;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     white-space: nowrap;
     animation: infinitetext 20s linear infinite;
     animation-delay: -5s;
@@ -142,7 +143,8 @@
     left: 0;
     height: 100%;
     padding-left: 50%;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     white-space: nowrap;
     transform: translate(50%, 0);
     animation: infinitetext 20s linear infinite;
@@ -151,7 +153,7 @@
 
 .infinite-job:hover {
     cursor: default;
-    transform: translate(0, calc(-50vh + 6rem));
+    transform: translate(0, calc(-50vh + 6.5rem)) scale(1.1);
     background-color: var(--yellow);
 }
 
