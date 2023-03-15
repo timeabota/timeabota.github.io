@@ -1,5 +1,4 @@
 .top-container {
-    position: relative;
     width: 100vw;
     height: 30vh;
     padding: 0.5rem 2rem;
@@ -246,11 +245,13 @@
     .back-main {
         right: unset;
         left: 1rem;
+        top: 1rem;
     }
 
     .top-container {
         padding: 0.5rem 1rem;
         height: 35vh;
+        min-height: 210px;
     }
 
     .pic-mobile-container div {

@@ -6,10 +6,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    background-color: #180d1c;
-    /* opacity: 0;
-    transform: translate(0px, -220px);
-    transition: all 0.3s ease-in-out; */
+    background-color: #851D11;
 }
 
 .top-container h1 {
@@ -40,7 +37,7 @@
 
 .back:hover {
     transform: scale(1.4);
-    background-color: #2C1A38;
+    background-color: #C30C09;
     transition: var(--defaultTransition);
 }
 
@@ -89,27 +86,33 @@
 }
 
 .pic-mobile-container div:nth-child(2) {
-    background-image: url('../portfolio_assets/004_code.png');
+    background-image: url('../portfolio_assets/003_side.png');
+    width: 50vw;
+    height: 30vw;
+    background-position: center;
 }
 
 .pic-mobile-container div:nth-child(1) {
-    background-image: url('../portfolio_assets/004_product.png');
+    background-image: url('../portfolio_assets/003_top.png');
+    width: 30vw;
+    height: 30vw;
 }
 
 .pic-mobile-container div:nth-child(4) {
-    background-image: url('../portfolio_assets/004_hello.png');
+    background-image: url('../portfolio_assets/003_variants.png');
+    width: 50vw;
+    height: 30vw;
 }
 
 .pic-mobile-container div:nth-child(3) {
-    background-image: url('../portfolio_assets/004_moodboard.png');
+    background-image: url('../portfolio_assets/003_plan.png');
+
 }
 
 .pic-mobile-container div:nth-child(5) {
-    background-image: url('../portfolio_assets/004_colors.png');
-}
-
-.pic-mobile-container div:nth-child(6) {
-    background-image: url('../portfolio_assets/004_lines.jpg');
+    background-image: url('../portfolio_assets/003_final.jpg');
+    width: 30vw;
+    height: 30vw;
 }
 
 .bottom-container {
@@ -117,7 +120,7 @@
     width: 100vw;
     padding: 4rem 15% 6rem;
     text-align: right;
-    background-color: #180d1c;
+    background-color: #851D11;
 }
 
 .bottom-container p, .bottom-container h2 {
@@ -132,7 +135,7 @@
     padding-bottom: 10px;
     text-align: center;
     font-size: 0.5rem;
-    background-color: #180d1c;
+    background-color: #851D11;
     color: #fff;
 }
 
@@ -150,7 +153,7 @@
     width: 55vh;
     height: 35vh;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: #2C1A38;
+    background: #A22315;
     transform: translate(-16vh, -16vh) rotate(-21deg);
     transition: var(--defaultTransition);
     z-index: 1;
@@ -168,7 +171,7 @@
     width: 30vh;
     height: 20vh;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: #2C1A38;
+    background: #A22315;
     transform: translate(-16vh, -16vh) rotate(-21deg);
     transition: var(--defaultTransition);
     z-index: 1;
@@ -194,7 +197,7 @@
     width: 55vh;
     height: 35vh;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: #2C1A38;
+    background: #A22315;
     transform: rotate(-21deg);
     transition: var(--defaultTransition);
     z-index: 1;
@@ -212,7 +215,7 @@
     width: 30vh;
     height: 20vh;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: #2C1A38;
+    background: #A22315;
     transform: rotate(150deg);
     transition: var(--defaultTransition);
     z-index: 1;

@@ -160,7 +160,7 @@
     background-color: #E2CDB6;
 }
 
-.bottom-container p, .bottom-container h2 {
+.bottom-container p, .bottom-container h2, .bottom-container a{
     position: inherit;
     z-index: 5;
 }
@@ -280,10 +280,12 @@
     .back-main {
         right: unset;
         left: 1rem;
+        top: 1rem;
     }
     .top-container {
         padding: 0.5rem 1rem;
         height: 35vh;
+        min-height: 210px;
     }
     .pic-mobile-container div {
         width: 45vw;

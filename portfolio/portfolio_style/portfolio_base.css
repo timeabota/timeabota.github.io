@@ -35,6 +35,10 @@ h3 {
     font-size: 1rem;
 }
 
+.enter { 
+    height: 1rem;
+}
+
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
