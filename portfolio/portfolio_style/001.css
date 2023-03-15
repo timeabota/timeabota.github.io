@@ -24,44 +24,17 @@
 
 .back {
     font-size: 0.6rem;
-    padding-bottom: 20px;
+    padding: 5px;
+    border: 1px solid black;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.61);
     transition: var(--defaultTransition);
     z-index: 2;
 }
 
 .back:hover {
     transform: scale(1.4);
+    background-color: #dbc0a2;
     transition: var(--defaultTransition);
-}
-
-.back:hover ~ .arrow {
-    transform: rotate(90deg) scale(0.5);
-    transition: var(--defaultTransition);
-}
-
-.arrow {
-    z-index: 1;
-    transition: var(--defaultTransition);
-}
-
-.arrow div:nth-child(1) {
-    width: 170px;
-    height: 2px;
-    background-color: black;
-}
-
-.arrow div:nth-child(2) {
-    width: 30px;
-    height: 2px;
-    background-color: black;
-    transform: translate(-4px, 8px) rotate(45deg);
-}
-
-.arrow div:nth-child(3) {
-    width: 30px;
-    height: 2px;
-    background-color: black;
-    transform: translate(-4px, -14px) rotate(-45deg);
 }
 
 .top-container h1 {
@@ -91,6 +64,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0;
+    transform: translate(0px, -50px);
+    transition: var(--defaultTransition);
+}
+
+.pic-desktop-container div.fadein {
+    opacity: 1;
+    transform: translate(0, 0);
     transition: var(--defaultTransition);
 }
 
@@ -135,6 +116,14 @@
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0;
+    transform: translate(0px, -50px);
+    transition: var(--defaultTransition);
+}
+
+.pic-mobile-container div.fadein {
+    opacity: 1;
+    transform: translate(0, 0);
     transition: var(--defaultTransition);
 }
 

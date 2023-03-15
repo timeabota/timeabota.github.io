@@ -67,97 +67,97 @@
     z-index: 0;
 }
 
-.services-list:nth-of-type(1):hover ~ .dotted-background span {
+.services-list:nth-of-type(2):hover ~ .dotted-background span {
     background-color: var(--mindaro);
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(1):hover ~ .services-triangle {
+.services-list:nth-of-type(2):hover ~ .services-triangle {
     background-color: var(--mindaro);
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(1):hover ~ .colored-background {
+.services-list:nth-of-type(2):hover ~ .colored-background {
     background-color: var(--mauve);
     transition: var(--defaultTransition);
 } 
 
 
-.services-list:nth-of-type(2):hover ~ .dotted-background span {
+.services-list:nth-of-type(3):hover ~ .dotted-background span {
     background-color: #80C36F;
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(2):hover ~ .services-triangle {
+.services-list:nth-of-type(3):hover ~ .services-triangle {
     background-color: #80C36F;
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(2):hover ~ .colored-background {
+.services-list:nth-of-type(3):hover ~ .colored-background {
     background-color: var(--yellow);
     transition: var(--defaultTransition);
 } 
 
 
-.services-list:nth-of-type(3):hover ~ .dotted-background span {
+.services-list:nth-of-type(4):hover ~ .dotted-background span {
     background-color: var(--aquamarine);
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(3):hover ~ .services-triangle {
+.services-list:nth-of-type(4):hover ~ .services-triangle {
     background-color: var(--aquamarine);
     transition: var(--defaultTransition);
 } 
 
-.services-list:nth-of-type(3):hover ~ .colored-background {
+.services-list:nth-of-type(4):hover ~ .colored-background {
     background-color: var(--indigo);
     transition: var(--defaultTransition);
 } 
 
 
-.services-list:nth-of-type(4):hover ~ .dotted-background span {
-    background-color: #C4F094;
-    transition: var(--defaultTransition);
-} 
-
-.services-list:nth-of-type(4):hover ~ .services-triangle {
-    background-color: #C4F094;
-    transition: var(--defaultTransition);
-} 
-
-.services-list:nth-of-type(4):hover ~ .colored-background {
-    background-color: #FFAF7D;
-    transition: var(--defaultTransition);
-} 
-
-
 .services-list:nth-of-type(5):hover ~ .dotted-background span {
-    background-color: #FFAF7D;
+    background-color: #C4F094;
     transition: var(--defaultTransition);
 } 
 
 .services-list:nth-of-type(5):hover ~ .services-triangle {
-    background-color: #FFAF7D;
+    background-color: #C4F094;
     transition: var(--defaultTransition);
 } 
 
 .services-list:nth-of-type(5):hover ~ .colored-background {
-    background-color: var(--purple);
+    background-color: #FFAF7D;
     transition: var(--defaultTransition);
 } 
 
 
 .services-list:nth-of-type(6):hover ~ .dotted-background span {
-    background-color: #7EBDC2;
+    background-color: #FFAF7D;
     transition: var(--defaultTransition);
 } 
 
 .services-list:nth-of-type(6):hover ~ .services-triangle {
-    background-color: #7EBDC2;
+    background-color: #FFAF7D;
     transition: var(--defaultTransition);
 } 
 
 .services-list:nth-of-type(6):hover ~ .colored-background {
+    background-color: var(--purple);
+    transition: var(--defaultTransition);
+} 
+
+
+.services-list:nth-of-type(7):hover ~ .dotted-background span {
+    background-color: #7EBDC2;
+    transition: var(--defaultTransition);
+} 
+
+.services-list:nth-of-type(7):hover ~ .services-triangle {
+    background-color: #7EBDC2;
+    transition: var(--defaultTransition);
+} 
+
+.services-list:nth-of-type(7):hover ~ .colored-background {
     background-color: #FFCC33;
     transition: var(--defaultTransition);
 } 
@@ -436,37 +436,37 @@ span:hover {
 
 /* MINWIDTH MEDIA QUERIES */
 @media screen and (min-width:769px) {
-    .services-list:nth-of-type(1):hover ~ .services-text div:nth-child(1)  {
+    .services-list:nth-of-type(2):hover ~ .services-text div:nth-child(1)  {
         opacity: 1;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);
     } 
     
-    .services-list:nth-of-type(2):hover ~ .services-text div:nth-child(2)  {
+    .services-list:nth-of-type(3):hover ~ .services-text div:nth-child(2)  {
         opacity: 1;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);
     } 
     
-    .services-list:nth-of-type(3):hover ~ .services-text div:nth-child(3)  {
+    .services-list:nth-of-type(4):hover ~ .services-text div:nth-child(3)  {
         opacity: 1;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);
     } 
     
-    .services-list:nth-of-type(4):hover ~ .services-text div:nth-child(4)  {
+    .services-list:nth-of-type(5):hover ~ .services-text div:nth-child(4)  {
         opacity: 1;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);
     }
     
-    .services-list:nth-of-type(5):hover ~ .services-text div:nth-child(5)  {
+    .services-list:nth-of-type(6):hover ~ .services-text div:nth-child(5)  {
         opacity: 1;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);
     }
     
-    .services-list:nth-of-type(6):hover ~ .services-text div:nth-child(6)  {
+    .services-list:nth-of-type(7):hover ~ .services-text div:nth-child(6)  {
         opacity: 1;
         transform: translate(0px, 0px);
         transition: var(--defaultTransition);

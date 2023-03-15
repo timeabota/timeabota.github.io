@@ -30,22 +30,24 @@ window.addEventListener('DOMContentLoaded', ()=> {
 })
 
 const topContainer = document.querySelector('.top-container');
-
+const mobilePic = document.querySelectorAll('.pic-mobile-container div');
+const desktopPic = document.querySelectorAll('.pic-desktop-container div');
+const bottomContainer = document.querySelector('.bottom-container');
 
 //observer
-// const observer = new IntersectionObserver (entries => {
-//     entries.forEach(entry => {
-//         if(entry.isIntersecting){
-//             topContainer.classList.add('fadeintop');
-//         } else {
-//             topContainer.classList.remove('fadeintop');
-//         }
-//     })
-// },
-// {
-//     threshold: 1
-// })
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('fadein');
+        } else {
+            entry.target.classList.remove('fadein');
+        }
+    })
+}, {
+    threshold: 0.2
+})
 
-// observer.observe(topContainer);
+desktopPic.forEach(e => observer.observe(e));
+mobilePic.forEach(e => observer.observe(e));
 
 

@@ -21,6 +21,7 @@
     position: relative;
     display: inline-block;
     color: black;
+    font-size: 15px;
     bottom: -20px;
     opacity: 0;
     transition: var(--defaultTransition);
