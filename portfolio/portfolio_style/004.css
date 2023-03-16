@@ -7,9 +7,6 @@
     align-items: flex-end;
     justify-content: flex-end;
     background-color: #180d1c;
-    /* opacity: 0;
-    transform: translate(0px, -220px);
-    transition: all 0.3s ease-in-out; */
 }
 
 .top-container h1 {
@@ -17,24 +14,24 @@
 }
 
 .back-main {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
     position: fixed;
     right: 2rem;
     top: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
     z-index: 10;
 }
 
 .back {
     font-size: 0.6rem;
+    text-align: right;
     color: #fff;
-    text-shadow: 1px 1px 5px black;
     border: 1px solid white;
+    text-shadow: 1px 1px 5px black;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     padding: 5px;
     transition: var(--defaultTransition);
-    text-align: right;
     z-index: 2;
 }
 
@@ -56,13 +53,13 @@
 }
 
 .pic-mobile-container {
-    display: flex;
     width: 100vw;
     padding: 2rem 2rem 0rem;
     background-color: #fff;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .pic-mobile-container div {
@@ -120,7 +117,7 @@
     background-color: #180d1c;
 }
 
-.bottom-container p, .bottom-container h2 {
+.bottom-container p, .bottom-container h1, .bottom-container a {
     position: inherit;
     color: #fff;
     font-weight: 300;
@@ -216,13 +213,13 @@
     transform: rotate(150deg);
     transition: var(--defaultTransition);
     z-index: 1;
-
 }
 
 .bot-triangles :nth-child(2):hover {
     transform:  rotate(160deg) scale(1.1);
     transition: var(--defaultTransition);
 }
+
 
 /* MAXWIDTH MEDIA QUERIES */
 @media screen and (max-width: 768px) {
@@ -257,7 +254,7 @@
         padding: 1rem;
     }
 
-    .bottom-container p, .bottom-container h2 {
+    .bottom-container p {
         font-size: 0.8rem;
     }
 }
@@ -266,12 +263,8 @@
     .top-container {
         height: 40vh;
     }
+    
     .top-container h1 {
         font-size: 1.3rem;
     }
-
-    .arrow div:nth-child(1) {
-        width: 155px;
-    }
-
 }

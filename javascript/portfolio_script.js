@@ -44,7 +44,7 @@ const observer = new IntersectionObserver(entries => {
         }
     })
 }, {
-    threshold: 0.2
+    threshold: 0.25
 })
 
 desktopPic.forEach(e => observer.observe(e));

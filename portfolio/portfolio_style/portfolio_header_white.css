@@ -5,20 +5,27 @@
     z-index: 15;
 }
 
+.logo-container {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
 .logo {
-    font-size: 2rem;
-    padding-left: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 0.5rem;
-    color: #fff;
-    text-shadow: 1px 1px 5px black;
+    height: 3rem;
+    width: 3rem;
+    background-image: url('../../assets/logo_fff.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .name {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     width: 300px;
-    padding-left: 2rem;
-    color: #fff;
+    color: white;
     text-shadow: 1px 1px 5px black;
 }
 
@@ -27,29 +34,19 @@
         width: 100vw;
         height: unset;
     }
-    .logo {
-        position: absolute;
+    .logo-container {
         top: 1rem;
-        right: 0;
+        right: 1rem;
+        flex-direction: row-reverse;
+    }
+
+    .logo {
         width: 100px;
-        padding: unset;     
-        padding-right: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
         z-index: 18;
     }
 
     .name {
-        position: absolute;
-        top: 3rem;
-        right: 0;
-        width: unset;
-        padding: unset;
-        padding-right: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
         text-align: right;
     }
+}
 }

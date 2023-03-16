@@ -7,18 +7,15 @@
     align-items: flex-end;
     justify-content: flex-end;
     background-color: #E2CDB6;
-    /* opacity: 0;
-    transform: translate(0px, -220px);
-    transition: all 0.3s ease-in-out; */
 }
 
 .back-main {
+    position: fixed;
+    top: 3rem;
+    right: 2rem;
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
-    position: fixed;
-    right: 2rem;
-    top: 3rem;
     z-index: 10;
 }
 
@@ -51,11 +48,11 @@
     position: relative;
     width: 100vw;
     height: 100%;
-    background-color: #fff;
     padding: 0rem 2rem 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #fff;
 }
 
 .pic-desktop-container div {
@@ -103,10 +100,10 @@
     display: flex;
     width: 100vw;
     padding: 2rem 2rem 0rem;
-    background-color: #fff;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 }
 
 .pic-mobile-container div {
@@ -160,7 +157,7 @@
     background-color: #E2CDB6;
 }
 
-.bottom-container p, .bottom-container h2, .bottom-container a{
+.bottom-container p, .bottom-container h1, .bottom-container a{
     position: inherit;
     z-index: 5;
 }
@@ -257,10 +254,12 @@
 }
 
 .bot-triangles :nth-child(2):hover {
-    transform:  rotate(160deg) scale(1.1);
+    transform: rotate(160deg) scale(1.1);
     transition: var(--defaultTransition);
 }
 
+
+/* MAXWIDTH MEDIA QUERIES */
 @media screen and (max-width: 1280px) {
     .pic-mobile-container {
         justify-content: space-evenly;
@@ -282,60 +281,58 @@
         left: 1rem;
         top: 1rem;
     }
+
     .top-container {
         padding: 0.5rem 1rem;
         height: 35vh;
         min-height: 210px;
     }
+
     .pic-mobile-container div {
         width: 45vw;
     }
+
     .pic-desktop-container div {
         width: 100vw;
     }
+
     .pic-desktop-container div:hover {
         transform: scale(1.6);
     }
+
     .top-triangles div:nth-child(2) {
         display: none;
     }
+
     .bottom-container {
         padding: 1rem;
     }
-    .bottom-container p, .bottom-container h2 {
+
+    .bottom-container p {
         font-size: 0.8rem;
     }
-
 }
 
 @media screen and (max-width: 650px) {
     .top-container {
         height: 40vh;
     }
+
     .top-container h1 {
         font-size: 1.3rem;
     }
+
     .pic-mobile-container div {
         width: 90vw;
     }
+
     .pic-desktop-container div {
         margin: unset;
         margin-bottom: 10px;
-        
         width: 100vw;
     }
-    .arrow div:nth-child(1) {
-        width: 155px;
-    }
+    
     .pic-desktop-container {
         padding: unset;
     }
-}
-
-
-
-.fadeintop {
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: var(--defaultTransition);
 }

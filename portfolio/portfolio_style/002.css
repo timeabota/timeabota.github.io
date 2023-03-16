@@ -8,28 +8,27 @@
     justify-content: flex-end;
     background-color: #5D7155;
     z-index: 5;
-    transition: var(--defaultTransition);
 }
 
 .back-main {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
     position: fixed;
     right: 2rem;
     top: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
     z-index: 10;
 }
 
 .back {
-    font-size: 0.6rem;
-    color: #fff;
-    text-shadow: 1px 1px 5px black;
-    border: 1px solid white;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     padding: 5px;
-    transition: var(--defaultTransition);
+    font-size: 0.6rem;
     text-align: right;
+    color: #fff;
+    border: 1px solid white;
+    text-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: var(--defaultTransition);
     z-index: 2;
 }
 
@@ -40,8 +39,8 @@
 }
 
 .top-container h1 {
-    z-index: 7;
     color: #fff;
+    z-index: 7;
 }
 
 .top-container p {
@@ -53,13 +52,13 @@
 
 .pic-mobile-container {
     position: relative;
-    display: flex;
     width: 100vw;
+    margin: 2rem 0rem;
     background-color: #fff;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0rem;
+    flex-wrap: wrap;
     z-index: 7;
 }
 
@@ -131,7 +130,7 @@
     z-index: 5;
 }
 
-.bottom-container p, .bottom-container h2 {
+.bottom-container p, .bottom-container h1 {
     position: inherit;
     color: #fff;
     z-index: 5;
@@ -140,9 +139,9 @@
 .footer {
     width: 100vw;
     padding-bottom: 10px;
-    text-align: center;
     font-size: 0.5rem;
     color: #fff;
+    text-align: center;
     background-color: #5D7155;
 }
 
@@ -234,6 +233,8 @@
     transition: var(--defaultTransition);
 }
 
+
+/* MAXWIDTH MEDIA QUERIES */
 @media screen and (max-width: 1280px) {
     .pic-mobile-container {
         justify-content: space-evenly;
@@ -249,9 +250,9 @@
     }
 
     .top-container {
-        padding: 0.5rem 1rem;
         height: 35vh;
         min-height: 210px;
+        padding: 0.5rem 1rem;
     }
 
     .pic-mobile-container div {
@@ -261,11 +262,12 @@
     .top-triangles div:nth-child(2) {
         display: none;
     }
+
     .bottom-container {
         padding: 1rem;
     }
 
-    .bottom-container p, .bottom-container h2 {
+    .bottom-container p {
         font-size: 0.8rem;
     }
 }
@@ -278,10 +280,12 @@
     .top-container h1 {
         font-size: 1.3rem;
     }
+
     .pic-mobile-container {
         width: 100vw;
         padding: unset;
     }
+    
     .pic-mobile-container div {
         width: 100vw;
     }
