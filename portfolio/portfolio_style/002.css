@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
-    z-index: 10;
+    z-index: 17;
 }
 
 .back {
@@ -25,7 +25,7 @@
     font-size: 0.6rem;
     text-align: right;
     color: #fff;
-    border: 1px solid white;
+    border: 2px solid white;
     text-shadow: 1px 1px 5px black;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     transition: var(--defaultTransition);
@@ -291,5 +291,13 @@
     }
 }
 
+@media screen and (max-width: 350px) {
+    .back-main {
+        width: 80px;
+    }
 
+    .back {
+        text-align: left;
+    }
+}
 
