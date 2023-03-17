@@ -60,14 +60,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    opacity: 0;
-    transform: translate(0px, -50px);
-    transition: var(--defaultTransition);
-}
-
-.pic-desktop-container div.fadein {
-    opacity: 1;
-    transform: translate(0, 0);
     transition: var(--defaultTransition);
 }
 
@@ -112,14 +104,6 @@
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: contain;
-    opacity: 0;
-    transform: translate(0px, -50px);
-    transition: var(--defaultTransition);
-}
-
-.pic-mobile-container div.fadein {
-    opacity: 1;
-    transform: translate(0, 0);
     transition: var(--defaultTransition);
 }
 
