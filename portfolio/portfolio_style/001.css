@@ -22,7 +22,7 @@
 .back {
     font-size: 0.6rem;
     padding: 5px;
-    border: 2px solid black;
+    border: 1.5px solid black;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.61);
     transition: var(--defaultTransition);
 }
@@ -320,7 +320,7 @@
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 420px) {
     .back-main {
         width: 80px;
     }

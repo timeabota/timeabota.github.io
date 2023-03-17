@@ -25,7 +25,7 @@
     font-size: 0.6rem;
     text-align: right;
     color: #fff;
-    border: 2px solid white;
+    border: 1.5px solid white;
     text-shadow: 1px 1px 5px black;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     transition: var(--defaultTransition);
@@ -283,7 +283,7 @@
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 420px) {
     .back-main {
         width: 80px;
     }
