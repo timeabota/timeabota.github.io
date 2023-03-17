@@ -143,6 +143,7 @@
     left: 0;
     width: 100vw;
     height: 30vh;
+    overflow: hidden;
     z-index: 6;
 }
 
