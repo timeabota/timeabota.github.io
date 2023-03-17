@@ -68,7 +68,7 @@
     margin: 1rem;
     background-position-x: center;
     background-repeat: no-repeat;
-    transform: translate(0px, -50px);
+    background-size: contain;
     transition: var(--defaultTransition);
 }
 
@@ -137,6 +137,7 @@
     left: 0;
     width: 100vw;
     height: 30vh;
+    overflow: hidden;
     z-index: 1;
 }
 
