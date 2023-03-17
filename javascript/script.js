@@ -161,10 +161,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
                     span.classList.add('fade');
                 }, (idx + 1) * 50)
             })
-        }, 1500);
+        }, 2300);
 
         setTimeout(()=>{
             intro.style.top = '-100vh';
-        }, 1800);
+        }, 2500);
     })
 })

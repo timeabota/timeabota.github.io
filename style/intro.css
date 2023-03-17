@@ -5,7 +5,10 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: var(--black);
+    background: linear-gradient(
+        to right, var(--mindaro), var(--aquamarine), var(--indigo));
+    background-size: 400% 400%;
+    animation: animate-background 3s infinite ease-in-out;
     transition: var(--defaultTransition);
     z-index: 30;
 }
@@ -17,10 +20,87 @@
     transform: translate(-50%, -50%);
 }
 
+.intro-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -20%);
+    animation: scale-up 1.9s ease-in;
+    transition: var(--defaultTransition);
+}
+
+.intro-wrapper path:nth-child(1) {
+    stroke-dasharray: 32px;
+    stroke-dashoffset: 32px;
+    animation: dash-animation 2s ease-in-out forwards, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(2) {
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+    animation: dash-animation 1.5s ease-in-out forwards, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(3) {
+    stroke-dasharray: 561px;
+    stroke-dashoffset: 561px;
+    animation: dash-animation 1.5s ease-in-out forwards 0.2s, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(4) {
+    stroke-dasharray: 31px;
+    stroke-dashoffset: 31px;
+    animation: dash-animation 1.5s ease-in-out forwards, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(5) {
+    stroke-dasharray: 1690px;
+    stroke-dashoffset: 1690px;
+    animation: dash-animation 1.5s ease-in-out forwards 0.4s, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(6) {
+    stroke-dasharray: 32px;
+    stroke-dashoffset: 32px;
+    animation: dash-animation 1.5s ease-in-out forwards 0.6s, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(7) {
+    stroke-dasharray: 32px;
+    stroke-dashoffset: 32px;
+    animation: dash-animation 1.5s ease-in-out forwards, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(8) {
+    stroke-dasharray: 745px;
+    stroke-dashoffset: 745px;
+    animation: dash-animation 1.5s ease-in-out forwards 0.2s, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(9) {
+    stroke-dasharray: 391px;
+    stroke-dashoffset: 391px;
+    animation: dash-animation 1.5s ease-in-out forwards 0.6s, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(10) {
+    stroke-dasharray: 1804px;
+    stroke-dashoffset: 1804px;
+    animation: dash-animation 1.5s ease-in-out forwards 0.4s, filler 0.3s ease-in-out forwards 1.5s;
+}
+
+.intro-wrapper path:nth-child(11) {
+    stroke-dasharray: 729px;
+    stroke-dashoffset: 729;
+    animation: dash-animation 1.5s ease-in-out forwards, filler 0.3s ease-in-out forwards 1.5s;
+}
+
 .logo-intro {
     position: relative;
     display: inline-block;
-    color: #ffffff;
+    color: #000;
     bottom: -20px;
     opacity: 0;
     transition: var(--defaultTransition);
@@ -36,4 +116,41 @@
     bottom: 150px;
     opacity: 0;
     transition: var(--defaultTransition);
+}
+
+.intro-wrapper .cls-1 {
+    fill-opacity: 10;
+    animation: filler 1s ease-in-out forwards 1s;
+}
+
+
+/* KEYFRAMES FOR SPLASH SCREEN */
+@keyframes dash-animation {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes filler {
+    0% {
+        fill: transparent;
+    }
+    80% {
+        fill: #00000048;
+    }
+    100% {
+        fill: #000;
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        transform: translate(-50%, -20%) scale(4);
+    }
+    80% {
+        transform: translate(-50%, -20%) scale(3.5);
+    }
+    100% {
+        transform: translate(-50%, -20%) scale(1);
+    }
 }
