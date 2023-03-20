@@ -140,7 +140,7 @@
     background-color: #E2CDB6;
 }
 
-.bottom-container p, .bottom-container h1, .bottom-container a{
+.bottom-container p, .bottom-container h1, .bottom-container a {
     position: inherit;
     z-index: 5;
 }
