@@ -101,14 +101,14 @@
 
 .main-pic {
     position: absolute;
-    top: 130px;
-    width: 60vw;
-    height: 50vh;
-    rotate: -30deg;
-    background-image: url();
+    right: 20%;
+    top: -25%;
+    width: 100vh;
+    height: 100vh;
+    background-image: url('../assets/ball.png');
     background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 3;
+    background-size: cover;
+
 }
 
 .infinite-job {
@@ -173,7 +173,7 @@
     z-index: 1;
 }
 
-.main-triangles :nth-child(1) {
+/* .main-triangles :nth-child(1) {
     position: absolute;
     width: 70vh;
     height: 40vh;
@@ -184,19 +184,37 @@
     z-index: 1;
 }
 
-.main-triangles :nth-child(1):hover {
+    .main-triangles :nth-child(1):hover {
     transform: translate(-16vh, -16vh) rotate(-10deg) scale(1.1);
     transition: var(--defaultTransition);
 }
+*/
+
+/* .main-triangles :nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background-image: url("../assets/18untitled.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: var(--defaultTransition);
+    transform: rotate(315deg);
+    z-index: 1;
+} */
+
+
 
 .main-triangles :nth-child(2) {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 70vh;
-    height: 25vh;
+    width: 49vh;
+    height: 16vh;
     background: var(--yellow);
-    clip-path: polygon(61% 50%, 100% 0, 100% 100%, 81% 100%);
+    clip-path: polygon(54% 57%, 100% 0, 100% 100%, 81% 100%);
     transition: var(--defaultTransition);
     z-index: 1;
 }
@@ -257,12 +275,6 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-    }
-
-    .main-pic {
-        top: 80px;
-        left: 0px;
-        rotate: 22deg;
     }
 
     .hello-container {
