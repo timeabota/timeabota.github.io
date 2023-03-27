@@ -26,7 +26,7 @@
     position: absolute;
     height: inherit;
     width: inherit;
-    background-image: url(../assets/001.jpg);
+    background-image: url('../assets/001.jpg');
     background-size: cover;
     background-position: 0px -200px;
     background-repeat: no-repeat;
