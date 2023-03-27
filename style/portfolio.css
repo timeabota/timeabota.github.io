@@ -2,14 +2,13 @@
     background-color: var(--mindaro);
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .portfolio-relative-container {
     position: relative;
     height: 100vh;
     width: 100vw;
-    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -20,6 +19,7 @@
     width: 70vw;
     font-size: 1.5rem;
     border-bottom: 1px solid black;
+    padding-top: 2rem;
     opacity: 0;
     transform: translate(-50px, 0px);
     z-index: 10;
@@ -166,20 +166,10 @@
 
 
 /* MAXWIDTH MEDIA QUERIES */
-@media screen and (max-width: 960px) {
-    .portfolio-relative-container {
-        padding: 0;
-        justify-content: center;
-    }
-
+@media screen and (max-width: 1024px) {
     .port-title {
         padding-right: 10px;
-        border: unset;
         text-align: right;
-    }
-
-    .port-table {
-        margin: unset;
     }
 
     .port-row {
@@ -192,10 +182,6 @@
         background-color: unset;
     }
     
-    .port-row:nth-child(even) {
-        background-color: #b9ed82c9;
-    }
-
     .port-row div:nth-child(2) {
         width: 26vw;
     }
@@ -234,7 +220,7 @@
         height: 70vh;
         width: 100vw;
         padding: unset;
-        margin-top: 35%;
+        margin-top: 30vh;
         justify-content: space-evenly;
     }
 
@@ -265,6 +251,10 @@
 
     .port-row div:nth-child(3) {
         max-width: 50vw;
+    }
+
+    .port-triangles div:nth-child(2) {
+        right: -100px;
     }
 
     .port-pic-1, .port-pic-2, .port-pic-3, .port-pic-4, .port-pic-5, .port-pic-6, .port-pic-7, .port-pic-8, .port-pic-9, .port-pic-10 {

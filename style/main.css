@@ -10,19 +10,24 @@
     position: relative;
     top: 0px;
     right: 0px;
-    height: 25vh;
-    padding-top: 2rem;
-    display: flex;
-    justify-content: flex-end;
+    height: 100vh;
     z-index: 5;
 }
 
-.hello-container {
-    width: 30vw;
+.main-box {
+    position: absolute;
+    right: 10%;
+    top: 20%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     z-index: 5;
+}
+
+.hello-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .hello-container h2 {
@@ -87,19 +92,16 @@
 }
 
 .main-content {
-    width: 40vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    flex-direction: column;
+    width: 50vw;
+    padding-top: 2rem;
     font-size: 0.8rem;
     opacity: 0;
+    text-align: right;
     transform: translate(0px, 50px);
     transition: var(--defaultTransition);
-    z-index: 5;
 }
 
-.main-pic {
+/* .main-pic {
     position: absolute;
     right: 20%;
     top: -25%;
@@ -108,8 +110,7 @@
     background-image: url('../assets/ball.png');
     background-repeat: no-repeat;
     background-size: cover;
-
-}
+} */
 
 .infinite-job {
     position: fixed;
@@ -173,7 +174,7 @@
     z-index: 1;
 }
 
-/* .main-triangles :nth-child(1) {
+.main-triangles :nth-child(1) {
     position: absolute;
     width: 70vh;
     height: 40vh;
@@ -188,33 +189,15 @@
     transform: translate(-16vh, -16vh) rotate(-10deg) scale(1.1);
     transition: var(--defaultTransition);
 }
-*/
-
-/* .main-triangles :nth-child(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 500px;
-    height: 500px;
-    background-image: url("../assets/18untitled.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: var(--defaultTransition);
-    transform: rotate(315deg);
-    z-index: 1;
-} */
-
-
 
 .main-triangles :nth-child(2) {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 49vh;
-    height: 16vh;
+    width: 56vh;
+    height: 25vh;
     background: var(--yellow);
-    clip-path: polygon(54% 57%, 100% 0, 100% 100%, 81% 100%);
+    clip-path: polygon(57% 73%, 100% 0, 100% 100%, 81% 100%);
     transition: var(--defaultTransition);
     z-index: 1;
 }
@@ -260,12 +243,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    .infinite-job {
-        display: none;
-    }
-
     .main-triangles div:nth-child(1) {
-        display: none;
+        height: 30vh;
+
     }
 
     .main-relative-container {
@@ -277,11 +257,12 @@
         overflow: hidden;
     }
 
-    .hello-container {
+    .main-box {
         width: 100vw;
-        margin-top: 30vh;
+        top: 50%;
+        transform: translate(0px, -50%);
+        right: unset;
         padding: 1rem;
-        flex-direction: column;
     }
 
     .hello-container h1 {
@@ -289,12 +270,7 @@
     }
 
     .main-content {
-        width: 100vw;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 0;
-        padding-top: 0;
-        font-size: 0.8rem;
+        width: 100%;
     }
 }
 
