@@ -209,7 +209,7 @@
 @media screen and (max-width:480px) {
     .about-photo-container {
         max-height: 80vh;
-        transform: translate(10vh, -20vh) scale(0.5);
+        transform: translate(0px, -23vh) scale(0.5);
         opacity: 1;
     }
 
@@ -237,7 +237,7 @@
 
 
 /* MAXHEIGHT MEDIA QUERIES */
-@media screen and (max-height: 600px) and (max-width: 570px) {
+@media screen and (max-height: 600px) and (max-width: 768px) {
     .about-text h1 {
         font-size: 0.9rem;
     }
