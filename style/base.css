@@ -72,7 +72,9 @@ h3 {
 .scroll-section {
     scroll-snap-align: center;
 }  
-
+strong {
+    font-weight: bold;
+  }
 
 /* SCROLL TO EXPLORE */
 .cir {
