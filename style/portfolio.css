@@ -221,7 +221,7 @@
         height: 70vh;
         width: 100vw;
         padding: unset;
-        bottom: 0;
+        bottom: 1rem;
         justify-content: space-evenly;
     }
 
