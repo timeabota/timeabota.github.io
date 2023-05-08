@@ -217,10 +217,11 @@
     }
 
     .port-table {
+        position: absolute;
         height: 70vh;
         width: 100vw;
         padding: unset;
-        margin-top: 30vh;
+        bottom: 0;
         justify-content: space-evenly;
     }
 
